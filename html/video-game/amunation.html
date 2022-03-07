@@ -1,0 +1,2956 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>video-game.amunation API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>video-game.amunation</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">from abc import abstractmethod
+from random import randint;
+from enum import Enum;
+
+class WeaponTypeValue:
+    &#34;&#34;&#34;Class that represents a detailed weapon type value.
+    &#34;&#34;&#34;
+    def __init__(self, id: int, description_en: str, description_fr: str) -&gt; None:
+        &#34;&#34;&#34;Weapon Type Value Construtor.
+
+        Args:
+            id (int): ID of the weapon type value.
+            description_en (str): English description.
+            description_fr (str): French description.
+        &#34;&#34;&#34;
+        self.__id: int = id;
+        self.__description_en: str = description_en;
+        self.__description_fr: str = description_fr;
+        
+    def get_id(self) -&gt; int:
+        &#34;&#34;&#34;Get the weapon type value identifier.
+
+        Returns:
+            int: The identifier.
+        &#34;&#34;&#34;
+        return self.__id;
+    
+    def get_description_fr(self) -&gt; str:
+        &#34;&#34;&#34;Get the french description.
+
+        Returns:
+            str: The french description.
+        &#34;&#34;&#34;
+        return self.__description_fr;
+
+    def get_description_en(self) -&gt; str:
+        &#34;&#34;&#34;Get the english description.
+
+        Returns:
+            str: The english description.
+        &#34;&#34;&#34;
+        return self.__description_fr;
+
+class WeaponType(Enum):
+    &#34;&#34;&#34;Enumeration that represents all available weapon types.
+
+    Args:
+        Enum: Enumeration
+    &#34;&#34;&#34;
+    ONE_HAND_SWORD=WeaponTypeValue(id=1, description_en=&#34;One Hand Sword&#34;, description_fr=&#34;Epée à une main&#34;);
+    TWO_HANDS_SWORD=WeaponTypeValue(id=2, description_fr=&#34;Epée à deux mains&#34;, description_en=&#34;Two Hands Sword&#34;);
+    ONE_HAND_AXE=WeaponTypeValue(3, description_fr=&#34;Hache à une main&#34;, description_en=&#34;One Hand Axe&#34;);
+    TWO_HANDS_AXE=WeaponTypeValue(4, &#34;Two hands axe&#34;, description_fr=&#34;Hace à deux mains&#34;);
+    ONE_HAND_MACE=WeaponTypeValue(5, &#34;Mace à une main&#34;, description_fr=&#34;One Hand Mace&#34;);
+    TWO_HANDS_MACE=WeaponTypeValue(6, &#34;Mace à deux mains&#34;, description_fr=&#34;Two Hands Mace&#34;);
+    STAFF=WeaponTypeValue(7, &#34;Staff&#34;, description_fr=&#34;Batton&#34;);
+    BOW=WeaponTypeValue(8, &#34;Bow&#34;, description_fr=&#34;Arc&#34;);
+    CROSSBOW=WeaponTypeValue(8, &#34;Crossbow&#34;, description_fr=&#34;Arbalète&#34;);
+
+class Projectile:
+    &#34;&#34;&#34;Class that represents a projectile tha must use remote weapons like bow and crossbow.
+    &#34;&#34;&#34;
+    def __init__(self) -&gt; None:
+        &#34;&#34;&#34;Projectile Constructor.
+        &#34;&#34;&#34;
+        pass
+
+class Weapon:
+    &#34;&#34;&#34;
+    Class that represents a weapon that can be used by players and can be dropped on killed trashs or in vault.
+    &#34;&#34;&#34;
+    
+    def __init__(self, name: str, damage_min: int, damage_max: int, required_level: int, type: WeaponType, critical_rate: float, speed: float):
+        &#34;&#34;&#34;Weapon Constructor.
+
+        Args:
+            name (str): The name of the weapon.
+            damage_min (int): The minimal damage inflicted by the weapon.
+            damage_max (int): The maximal damage inflicted by the weapon.
+            required_level (int): The minimal required player&#39;s level to use the weapon.
+            type (WeaponType): The type of the weapon.
+            critical_rate (float): The critical rate of the weapon.
+            speed (float): The speed of the weapon.
+        &#34;&#34;&#34;
+        self._name: str = name;
+        self._damage_min: int = damage_min;
+        self._damage_max: int = damage_max;
+        self._required_level: int = required_level;
+        self._type: WeaponType = type;
+        self._critical_rate: float = critical_rate;
+        self._speed: float = speed;
+
+    def get_damage_min(self) -&gt; int:
+        &#34;&#34;&#34;Get damage min that can inflict the weapon.
+
+        Returns:
+            int: Minimal damage.
+        &#34;&#34;&#34;
+        return self._damage_min;
+
+    def get_damage_max(self) -&gt; int:
+        &#34;&#34;&#34;Get damage max that can inflict the weapon.
+
+        Returns:
+            int: Maximal damage.
+        &#34;&#34;&#34;
+        return self._damage_max;
+
+    def __can_generate_critical_damage(self) -&gt; bool:
+        &#34;&#34;&#34;Function that check if a critical damage can be used.
+
+        Returns:
+            bool: True if damage can be used, else False.
+        &#34;&#34;&#34;
+        chance: int = randint(0, 100);
+        return True if (chance &lt;= self._critical_rate) else False;
+
+    def inflict_damage(self) -&gt; int:
+        &#34;&#34;&#34;Function that generate damage to inflict a the target.
+        It&#39;s using __damage_min, __damage_max to generate damage.
+
+        Returns:
+            int: Damage generated by the weapon.
+        &#34;&#34;&#34;
+        damage: int = randint(self._damage_min, self._damage_max);
+        can_critical: bool = self.__can_generate_critical_damage();
+        return damage*3 if (can_critical) else damage;
+
+class Sword(Weapon):
+    &#34;&#34;&#34;Class that represents a Sword.
+
+    Args:
+        Weapon (Weapon): Sword is a Weapon type base.
+    &#34;&#34;&#34;
+    def __init__(self, name: str, damage_min: int, damage_max: int, required_level: int, type: WeaponType, critical_rate: float, speed: float):
+        &#34;&#34;&#34;Sword Constructor.
+
+        Args:
+            name (str): The name of the weapon.
+            damage_min (int): The minimal damage inflicted by the weapon.
+            damage_max (int): The maximal damage inflicted by the weapon.
+            required_level (int): The minimal required player&#39;s level to use the weapon.
+            type (WeaponType): The type of the weapon.
+            critical_rate (float): The critical rate of the weapon.
+            speed (float): The speed of the weapon.
+        &#34;&#34;&#34;
+        Weapon.__init__(self, name, damage_min, damage_max, required_level, type, critical_rate, speed);
+
+class OneHandSword(Sword):
+    &#34;&#34;&#34;Class that represents an One Hand Sword.
+
+    Args:
+        Sword (Sword): OneHandSword is a Sword type base.
+    &#34;&#34;&#34;
+    def __init__(self, name: str, damage_min: int, damage_max: int, required_level: int, critical_rate: float, speed: float):
+        &#34;&#34;&#34;OneHandSword Constructor.
+
+        Args:
+            name (str): The name of the weapon.
+            damage_min (int): The minimal damage inflicted by the weapon.
+            damage_max (int): The maximal damage inflicted by the weapon.
+            required_level (int): The minimal required player&#39;s level to use the weapon.
+            critical_rate (float): The critical rate of the weapon.
+            speed (float): The speed of the weapon.
+        &#34;&#34;&#34;
+        Sword.__init__(self, name, damage_min, damage_max, required_level, WeaponType.ONE_HAND_SWORD, critical_rate, speed);
+
+    def inflict_damage(self) -&gt; int:
+        damage = super().inflict_damage();
+        return damage
+
+class TwoHandsSword(Sword):
+    &#34;&#34;&#34;Class that represents a Two Hands Sword.
+
+    Args:
+        Sword (Sword): TwoHandsSword is a Sword type base.
+    &#34;&#34;&#34;
+    def __init__(self, name: str, damage_min: int, damage_max: int, required_level: int, critical_rate: float, speed: float):
+        &#34;&#34;&#34;TwoHandsSword Constructor.
+
+        Args:
+            name (str): The name of the weapon.
+            damage_min (int): The minimal damage inflicted by the weapon.
+            damage_max (int): The maximal damage inflicted by the weapon.
+            required_level (int): The minimal required player&#39;s level to use the weapon.
+            critical_rate (float): The critical rate of the weapon.
+            speed (float): The speed of the weapon.
+        &#34;&#34;&#34;
+        Sword.__init__(self, name, damage_min, damage_max, required_level, WeaponType.TWO_HANDS_SWORD, critical_rate, speed);
+
+class Axe(Weapon):
+    &#34;&#34;&#34;Class that represents a Axe.
+
+    Args:
+        Weapon (Weapon): Axe is a Weapon type base.
+    &#34;&#34;&#34;
+    def __init__(self, name: str, damage_min: int, damage_max: int, required_level: int, type: WeaponType, critical_rate: float, speed: float):
+        &#34;&#34;&#34;Axe Constructor.
+
+        Args:
+            name (str): The name of the weapon.
+            damage_min (int): The minimal damage inflicted by the weapon.
+            damage_max (int): The maximal damage inflicted by the weapon.
+            required_level (int): The minimal required player&#39;s level to use the weapon.
+            type (WeaponType): The type of the weapon.
+            critical_rate (float): The critical rate of the weapon.
+            speed (float): The speed of the weapon.
+        &#34;&#34;&#34;
+        Weapon.__init__(self, name, damage_min, damage_max, required_level, type, critical_rate, speed);
+
+class OneHandAxe(Axe):
+    &#34;&#34;&#34;Class that represents an One Hand Axe.
+
+    Args:
+        Axe (Axe): OneHandAxe is a Axe type base.
+    &#34;&#34;&#34;
+    def __init__(self, name: str, damage_min: int, damage_max: int, required_level: int, critical_rate: float, speed: float):
+        &#34;&#34;&#34;OneHandAxe Constructor.
+
+        Args:
+            name (str): The name of the weapon.
+            damage_min (int): The minimal damage inflicted by the weapon.
+            damage_max (int): The maximal damage inflicted by the weapon.
+            required_level (int): The minimal required player&#39;s level to use the weapon.
+            critical_rate (float): The critical rate of the weapon.
+            speed (float): The speed of the weapon.
+        &#34;&#34;&#34;
+        Axe.__init__(self, name, damage_min, damage_max, required_level, WeaponType.ONE_HAND_AXE, critical_rate, speed);
+
+    def inflict_damage(self) -&gt; int:
+        damage = super().inflict_damage();
+        return damage
+
+class TwoHandsAxe(Axe):
+    &#34;&#34;&#34;Class that represents a Two Hands Axe.
+
+    Args:
+        Axe (Axe): TwoHandsAxe is a Axe type base.
+    &#34;&#34;&#34;
+    def __init__(self, name: str, damage_min: int, damage_max: int, required_level: int, critical_rate: float, speed: float):
+        &#34;&#34;&#34;TwoHandsAxe Constructor.
+
+        Args:
+            name (str): The name of the weapon.
+            damage_min (int): The minimal damage inflicted by the weapon.
+            damage_max (int): The maximal damage inflicted by the weapon.
+            required_level (int): The minimal required player&#39;s level to use the weapon.
+            critical_rate (float): The critical rate of the weapon.
+            speed (float): The speed of the weapon.
+        &#34;&#34;&#34;
+        Axe.__init__(self, name, damage_min, damage_max, required_level, WeaponType.TWO_HANDS_AXE, critical_rate, speed);
+
+class Mace(Weapon):
+    &#34;&#34;&#34;Class that represents a Mace.
+
+    Args:
+        Weapon (Weapon): Mace is a Weapon type base.
+    &#34;&#34;&#34;
+    def __init__(self, name: str, damage_min: int, damage_max: int, required_level: int, type: WeaponType, critical_rate: float, speed: float):
+        &#34;&#34;&#34;Mace Constructor.
+
+        Args:
+            name (str): The name of the weapon.
+            damage_min (int): The minimal damage inflicted by the weapon.
+            damage_max (int): The maximal damage inflicted by the weapon.
+            required_level (int): The minimal required player&#39;s level to use the weapon.
+            type (WeaponType): The type of the weapon.
+            critical_rate (float): The critical rate of the weapon.
+            speed (float): The speed of the weapon.
+        &#34;&#34;&#34;
+        Weapon.__init__(self, name, damage_min, damage_max, required_level, type, critical_rate, speed);
+
+class OneHandMace(Mace):
+    &#34;&#34;&#34;Class that represents an One Hand Mace.
+
+    Args:
+        Mace (Mace): OneHandMace is a Mace type base.
+    &#34;&#34;&#34;
+    def __init__(self, name: str, damage_min: int, damage_max: int, required_level: int, critical_rate: float, speed: float):
+        &#34;&#34;&#34;OneHandMace Constructor.
+
+        Args:
+            name (str): The name of the weapon.
+            damage_min (int): The minimal damage inflicted by the weapon.
+            damage_max (int): The maximal damage inflicted by the weapon.
+            required_level (int): The minimal required player&#39;s level to use the weapon.
+            critical_rate (float): The critical rate of the weapon.
+            speed (float): The speed of the weapon.
+        &#34;&#34;&#34;
+        Mace.__init__(self, name, damage_min, damage_max, required_level, WeaponType.ONE_HAND_MACE, critical_rate, speed);
+
+    def inflict_damage(self) -&gt; int:
+        damage = super().inflict_damage();
+        return damage
+
+class TwoHandsMace(Mace):
+    &#34;&#34;&#34;Class that represents a Two Hands Mace.
+
+    Args:
+        Mace (Mace): TwoHandsMace is a Mace type base.
+    &#34;&#34;&#34;
+    def __init__(self, name: str, damage_min: int, damage_max: int, required_level: int, critical_rate: float, speed: float):
+        &#34;&#34;&#34;TwoHandsMace Constructor.
+
+        Args:
+            name (str): The name of the weapon.
+            damage_min (int): The minimal damage inflicted by the weapon.
+            damage_max (int): The maximal damage inflicted by the weapon.
+            required_level (int): The minimal required player&#39;s level to use the weapon.
+            critical_rate (float): The critical rate of the weapon.
+            speed (float): The speed of the weapon.
+        &#34;&#34;&#34;
+        Mace.__init__(self, name, damage_min, damage_max, required_level, WeaponType.TWO_HANDS_MACE, critical_rate, speed);
+
+class Staff(Weapon):
+    &#34;&#34;&#34;Class that represents a Staff.
+
+    Args:
+        Weapon (Weapon): Staff is a Weapon type base.
+    &#34;&#34;&#34;
+    def __init__(self, name: str, damage_min: int, damage_max: int, required_level: int, critical_rate: float, speed: float):
+        &#34;&#34;&#34;Staff Constructor.
+
+        Args:
+            name (str): The name of the weapon.
+            damage_min (int): The minimal damage inflicted by the weapon.
+            damage_max (int): The maximal damage inflicted by the weapon.
+            required_level (int): The minimal required player&#39;s level to use the weapon.
+            critical_rate (float): The critical rate of the weapon.
+            speed (float): The speed of the weapon.
+        &#34;&#34;&#34;
+        Weapon.__init__(self, name, damage_min, damage_max, required_level, WeaponType.STAFF, critical_rate, speed);
+
+class Bow(Weapon):
+    &#34;&#34;&#34;Class that represents a Bow.
+
+    Args:
+        Weapon (Weapon): Bow is a Weapon type base.
+    &#34;&#34;&#34;
+    def __init__(self, name: str, damage_min: int, damage_max: int, required_level: int, critical_rate: float, speed: float):
+        &#34;&#34;&#34;Bow Constructor.
+
+        Args:
+            name (str): The name of the weapon.
+            damage_min (int): The minimal damage inflicted by the weapon.
+            damage_max (int): The maximal damage inflicted by the weapon.
+            required_level (int): The minimal required player&#39;s level to use the weapon.
+            critical_rate (float): The critical rate of the weapon.
+            speed (float): The speed of the weapon.
+        &#34;&#34;&#34;
+        Weapon.__init__(self, name, damage_min, damage_max, required_level, WeaponType.BOW, critical_rate, speed);
+
+    def fire(self, projectile: Projectile):
+        &#34;&#34;&#34;Fire the given projectil.
+
+        Args:
+            projectile (Projectile): The projectile use to damage target.
+        &#34;&#34;&#34;
+        pass;
+
+class Crossbow(Bow):
+    &#34;&#34;&#34;Class that represents a Crossbow.
+
+    Args:
+        Bow (Bow): Crossbow is a Bow type base.
+    &#34;&#34;&#34;
+    def __init__(self, name: str, damage_min: int, damage_max: int, required_level: int, critical_rate: float, speed: float):
+        &#34;&#34;&#34;Bow Constructor.
+
+        Args:
+            name (str): The name of the weapon.
+            damage_min (int): The minimal damage inflicted by the weapon.
+            damage_max (int): The maximal damage inflicted by the weapon.
+            required_level (int): The minimal required player&#39;s level to use the weapon.
+            critical_rate (float): The critical rate of the weapon.
+            speed (float): The speed of the weapon.
+        &#34;&#34;&#34;
+        Bow.__init__(self, name, damage_min, damage_max, required_level, WeaponType.CROSSBOW, critical_rate, speed);
+
+class WeaponBuilder:
+    &#34;&#34;&#34;Class that represents a Generic Weapon Builder.
+    &#34;&#34;&#34;
+    def __init__(self, type: WeaponType) -&gt; None:
+        &#34;&#34;&#34;WeaponBuilder Constructor.
+
+        Args:
+            type (WeaponType): The weapon&#39;s type.
+        &#34;&#34;&#34;
+        self._name: str = None;
+        self._damage_min: int = 0;
+        self._damage_max: int = 0;
+        self._required_level: int = 0;
+        self._type: WeaponType = type;
+        self._critical_rate: float = 0.0;
+        self._speed: float = 0.0;
+    
+    @staticmethod
+    def create_builder(type: WeaponType):
+        &#34;&#34;&#34;Create a builder for the specicfic weapon type generation.
+
+        Args:
+            type (WeaponType): The type of the weapon to build.
+
+        Returns:
+            WeaponBuilder: The right implementation f the WeaponBuilder to use.
+        &#34;&#34;&#34;
+        builder = None;
+        match (type):
+            case WeaponType.ONE_HAND_SWORD:
+                builder = StaffBuilder();
+            case WeaponType.TWO_HANDS_SWORD:
+                builder = TwoHandsSwordBuilder();
+            case WeaponType.ONE_HAND_AXE:
+                builder = OneHandAxeBuilder();
+            case WeaponType.TWO_HANDS_AXE:
+                builder = TwoHandsAxeBuilder();
+            case WeaponType.ONE_HAND_MACE:
+                builder = OneHandMaceBuilder();
+            case WeaponType.TWO_HANDS_MACE:
+                builder = TwoHandsMaceBuilder();
+            case WeaponType.STAFF:
+                builder = StaffBuilder();
+            case WeaponType.BOW:
+                builder = BowBuilder();
+            case WeaponType.CROSSBOW:
+                builder = CrossbowBuilder();
+            case _:
+                builder = WeaponBuilder(type);
+
+        return builder;
+    
+    def with_name(self, name: str):
+        &#34;&#34;&#34;Define the name of the weapon.
+
+        Args:
+            name (str): Weapon&#39;s name.
+
+        Returns:
+            WeaponBuilder: Updated builder.
+        &#34;&#34;&#34;
+        self._name = name;
+        return self;
+    
+    def with_damage_min(self, damage_min: int):
+        &#34;&#34;&#34;Define the minimal damage of the weapon.
+
+        Args:
+            damage_min (int): Weapon&#39;s minimal damage.
+
+        Returns:
+            WeaponBuilder: Updated builder.
+        &#34;&#34;&#34;
+        self._damage_min = damage_min;
+        return self;
+    
+    def with_damage_max(self, damage_max: int):
+        &#34;&#34;&#34;Define the maximal damage of the weapon.
+
+        Args:
+            damage_max (int): Weapon&#39;s maximal damage.
+
+        Returns:
+            WeaponBuilder: Updated builder.
+        &#34;&#34;&#34;
+        self._damage_max = damage_max;
+        return self;
+    
+    def with_required_level(self, required_level: int):
+        &#34;&#34;&#34;Define the minimal required level to use the weapon.
+
+        Args:
+            required_level (int): Minimal required level to use the weapon.
+
+        Returns:
+            WeaponBuilder: Updated builder.
+        &#34;&#34;&#34;
+        self._required_level = required_level;
+        return self;
+    
+    def with_critical_rate(self, critical_rate: float):
+        &#34;&#34;&#34;Define the critical rate of the weapon.
+
+        Args:
+            critical_rate (float): Critical rate of the weapon.
+
+        Returns:
+            WeaponBuilder: Updated builder.
+        &#34;&#34;&#34;
+        self._critical_rate = critical_rate;
+        return self;
+    
+    def with_speed(self, speed: float):
+        &#34;&#34;&#34;Define the attack&#39;s speed of the weapon.
+
+        Args:
+            speed (float): Speed of the weapon.
+
+        Returns:
+            WeaponBuilder: Updated builder.
+        &#34;&#34;&#34;
+        self._speed = speed;
+        return self;
+
+    @abstractmethod
+    def build(self) -&gt; Weapon:
+        &#34;&#34;&#34;Build the weapon.
+
+        Returns:
+            Weapon: The builded weapon.
+        &#34;&#34;&#34;
+        raise Exception(&#34;Not yet implemented.&#34;);
+    
+class OneHandSwordBuilder(WeaponBuilder):
+    &#34;&#34;&#34;Class that represents a One Hand Sword Builder.
+
+    Args:
+        WeaponBuilder (WeaponBuilder): OneHandSwordBuilder is a WeaponBuilder type base.
+    &#34;&#34;&#34;
+    def __init__(self) -&gt; None:
+        &#34;&#34;&#34;OneHandSwordBuilder Constructor.
+        &#34;&#34;&#34;
+        WeaponBuilder.__init__(self, WeaponType.ONE_HAND_SWORD);
+    
+    def build(self) -&gt; Weapon:
+        return OneHandSword(self._name, self._damage_min, self._damage_max, self._required_level, self._critical_rate, self._speed);
+
+class TwoHandsSwordBuilder(WeaponBuilder):
+    &#34;&#34;&#34;Class that represents a Two Hands Sword Builder.
+
+    Args:
+        WeaponBuilder (WeaponBuilder): TwoHandsSwordBuilder is a WeaponBuilder type base.
+    &#34;&#34;&#34;
+    def __init__(self) -&gt; None:
+        &#34;&#34;&#34;TwoHandsSwordBuilder Constructor.
+        &#34;&#34;&#34;
+        WeaponBuilder.__init__(self, WeaponType.TWO_HANDS_SWORD);
+    
+    def build(self) -&gt; Weapon:
+        return TwoHandsSword(self._name, self._damage_min, self._damage_max, self._required_level, self._critical_rate, self._speed);
+
+class OneHandAxeBuilder(WeaponBuilder):
+    &#34;&#34;&#34;Class that represents a One Hand Axe Builder.
+
+    Args:
+        WeaponBuilder (WeaponBuilder): OneHandAxeBuilder is a WeaponBuilder type base.
+    &#34;&#34;&#34;
+    def __init__(self) -&gt; None:
+        &#34;&#34;&#34;OneHandAxeBuilder Constructor.
+        &#34;&#34;&#34;
+        WeaponBuilder.__init__(self, WeaponType.ONE_HAND_AXE);
+    
+    def build(self) -&gt; Weapon:
+        return OneHandAxe(self._name, self._damage_min, self._damage_max, self._required_level, self._critical_rate, self._speed);
+
+class TwoHandsAxeBuilder(WeaponBuilder):
+    &#34;&#34;&#34;Class that represents a Two Hands Axe Builder.
+
+    Args:
+        WeaponBuilder (WeaponBuilder): TwoHandsAxeBuilder is a WeaponBuilder type base.
+    &#34;&#34;&#34;
+    def __init__(self) -&gt; None:
+        &#34;&#34;&#34;TwoHandsAxeBuilder Constructor.
+        &#34;&#34;&#34;
+        WeaponBuilder.__init__(self, WeaponType.TWO_HANDS_AXE);
+    
+    def build(self) -&gt; Weapon:
+        return TwoHandsAxe(self._name, self._damage_min, self._damage_max, self._required_level, self._critical_rate, self._speed);
+
+class OneHandMaceBuilder(WeaponBuilder):
+    &#34;&#34;&#34;Class that represents a One Hand Mace Builder.
+
+    Args:
+        WeaponBuilder (WeaponBuilder): OneHandMaceBuilder is a WeaponBuilder type base.
+    &#34;&#34;&#34;
+    def __init__(self) -&gt; None:
+        &#34;&#34;&#34;OneHandMaceBuilder Constructor.
+        &#34;&#34;&#34;
+        WeaponBuilder.__init__(self, WeaponType.ONE_HAND_MACE);
+    
+    def build(self) -&gt; Weapon:
+        return OneHandMace(self._name, self._damage_min, self._damage_max, self._required_level, self._critical_rate, self._speed);
+
+class TwoHandsMaceBuilder(WeaponBuilder):
+    &#34;&#34;&#34;Class that represents a Two Hands Mace Builder.
+
+    Args:
+        WeaponBuilder (WeaponBuilder): TwoHandsMaceBuilder is a WeaponBuilder type base.
+    &#34;&#34;&#34;
+    def __init__(self) -&gt; None:
+        &#34;&#34;&#34;TwoHandsMaceBuilder Constructor.
+        &#34;&#34;&#34;
+        WeaponBuilder.__init__(self, WeaponType.TWO_HANDS_MACE);
+    
+    def build(self) -&gt; Weapon:
+        return TwoHandsMace(self._name, self._damage_min, self._damage_max, self._required_level, self._critical_rate, self._speed);
+
+class StaffBuilder(WeaponBuilder):
+    &#34;&#34;&#34;Class that represents a Staff Builder.
+
+    Args:
+        WeaponBuilder (WeaponBuilder): StaffBuilder is a WeaponBuilder type base.
+    &#34;&#34;&#34;
+    def __init__(self) -&gt; None:
+        &#34;&#34;&#34;StaffBuilder Constructor.
+        &#34;&#34;&#34;
+        WeaponBuilder.__init__(self, WeaponType.STAFF);
+    
+    def build(self) -&gt; Weapon:
+        return Staff(self._name, self._damage_min, self._damage_max, self._required_level, self._critical_rate, self._speed);
+
+class BowBuilder(WeaponBuilder):
+    &#34;&#34;&#34;Class that represents a Bow Builder.
+
+    Args:
+        WeaponBuilder (WeaponBuilder): BowBuilder is a WeaponBuilder type base.
+    &#34;&#34;&#34;
+    def __init__(self) -&gt; None:
+        &#34;&#34;&#34;BowBuilder Constructor.
+        &#34;&#34;&#34;
+        WeaponBuilder.__init__(self, WeaponType.BOW);
+    
+    def build(self) -&gt; Weapon:
+        return Bow(self._name, self._damage_min, self._damage_max, self._required_level, self._critical_rate, self._speed);
+
+class CrossbowBuilder(WeaponBuilder):
+    &#34;&#34;&#34;Class that represents a Bow Builder.
+
+    Args:
+        WeaponBuilder (WeaponBuilder): CrossbowBuilder is a WeaponBuilder type base.
+    &#34;&#34;&#34;
+    def __init__(self) -&gt; None:
+        &#34;&#34;&#34;CrossbowBuilder Constructor.
+        &#34;&#34;&#34;
+        WeaponBuilder.__init__(self, WeaponType.CROSSBOW);
+    
+    def build(self) -&gt; Weapon:
+        return Crossbow(self._name, self._damage_min, self._damage_max, self._required_level, self._critical_rate, self._speed);</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="video-game.amunation.Axe"><code class="flex name class">
+<span>class <span class="ident">Axe</span></span>
+<span>(</span><span>name: str, damage_min: int, damage_max: int, required_level: int, type: video-game.amunation.WeaponType, critical_rate: float, speed: float)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class that represents a Axe.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>Weapon</code></strong> :&ensp;<code><a title="video-game.amunation.Weapon" href="#video-game.amunation.Weapon">Weapon</a></code></dt>
+<dd>Axe is a Weapon type base.</dd>
+</dl>
+<p>Axe Constructor.</p>
+<h2 id="args_1">Args</h2>
+<dl>
+<dt><strong><code>name</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the weapon.</dd>
+<dt><strong><code>damage_min</code></strong> :&ensp;<code>int</code></dt>
+<dd>The minimal damage inflicted by the weapon.</dd>
+<dt><strong><code>damage_max</code></strong> :&ensp;<code>int</code></dt>
+<dd>The maximal damage inflicted by the weapon.</dd>
+<dt><strong><code>required_level</code></strong> :&ensp;<code>int</code></dt>
+<dd>The minimal required player's level to use the weapon.</dd>
+<dt><strong><code>type</code></strong> :&ensp;<code><a title="video-game.amunation.WeaponType" href="#video-game.amunation.WeaponType">WeaponType</a></code></dt>
+<dd>The type of the weapon.</dd>
+<dt><strong><code>critical_rate</code></strong> :&ensp;<code>float</code></dt>
+<dd>The critical rate of the weapon.</dd>
+<dt><strong><code>speed</code></strong> :&ensp;<code>float</code></dt>
+<dd>The speed of the weapon.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Axe(Weapon):
+    &#34;&#34;&#34;Class that represents a Axe.
+
+    Args:
+        Weapon (Weapon): Axe is a Weapon type base.
+    &#34;&#34;&#34;
+    def __init__(self, name: str, damage_min: int, damage_max: int, required_level: int, type: WeaponType, critical_rate: float, speed: float):
+        &#34;&#34;&#34;Axe Constructor.
+
+        Args:
+            name (str): The name of the weapon.
+            damage_min (int): The minimal damage inflicted by the weapon.
+            damage_max (int): The maximal damage inflicted by the weapon.
+            required_level (int): The minimal required player&#39;s level to use the weapon.
+            type (WeaponType): The type of the weapon.
+            critical_rate (float): The critical rate of the weapon.
+            speed (float): The speed of the weapon.
+        &#34;&#34;&#34;
+        Weapon.__init__(self, name, damage_min, damage_max, required_level, type, critical_rate, speed);</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="video-game.amunation.Weapon" href="#video-game.amunation.Weapon">Weapon</a></li>
+</ul>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="video-game.amunation.OneHandAxe" href="#video-game.amunation.OneHandAxe">OneHandAxe</a></li>
+<li><a title="video-game.amunation.TwoHandsAxe" href="#video-game.amunation.TwoHandsAxe">TwoHandsAxe</a></li>
+</ul>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="video-game.amunation.Weapon" href="#video-game.amunation.Weapon">Weapon</a></b></code>:
+<ul class="hlist">
+<li><code><a title="video-game.amunation.Weapon.get_damage_max" href="#video-game.amunation.Weapon.get_damage_max">get_damage_max</a></code></li>
+<li><code><a title="video-game.amunation.Weapon.get_damage_min" href="#video-game.amunation.Weapon.get_damage_min">get_damage_min</a></code></li>
+<li><code><a title="video-game.amunation.Weapon.inflict_damage" href="#video-game.amunation.Weapon.inflict_damage">inflict_damage</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="video-game.amunation.Bow"><code class="flex name class">
+<span>class <span class="ident">Bow</span></span>
+<span>(</span><span>name: str, damage_min: int, damage_max: int, required_level: int, critical_rate: float, speed: float)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class that represents a Bow.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>Weapon</code></strong> :&ensp;<code><a title="video-game.amunation.Weapon" href="#video-game.amunation.Weapon">Weapon</a></code></dt>
+<dd>Bow is a Weapon type base.</dd>
+</dl>
+<p>Bow Constructor.</p>
+<h2 id="args_1">Args</h2>
+<dl>
+<dt><strong><code>name</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the weapon.</dd>
+<dt><strong><code>damage_min</code></strong> :&ensp;<code>int</code></dt>
+<dd>The minimal damage inflicted by the weapon.</dd>
+<dt><strong><code>damage_max</code></strong> :&ensp;<code>int</code></dt>
+<dd>The maximal damage inflicted by the weapon.</dd>
+<dt><strong><code>required_level</code></strong> :&ensp;<code>int</code></dt>
+<dd>The minimal required player's level to use the weapon.</dd>
+<dt><strong><code>critical_rate</code></strong> :&ensp;<code>float</code></dt>
+<dd>The critical rate of the weapon.</dd>
+<dt><strong><code>speed</code></strong> :&ensp;<code>float</code></dt>
+<dd>The speed of the weapon.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Bow(Weapon):
+    &#34;&#34;&#34;Class that represents a Bow.
+
+    Args:
+        Weapon (Weapon): Bow is a Weapon type base.
+    &#34;&#34;&#34;
+    def __init__(self, name: str, damage_min: int, damage_max: int, required_level: int, critical_rate: float, speed: float):
+        &#34;&#34;&#34;Bow Constructor.
+
+        Args:
+            name (str): The name of the weapon.
+            damage_min (int): The minimal damage inflicted by the weapon.
+            damage_max (int): The maximal damage inflicted by the weapon.
+            required_level (int): The minimal required player&#39;s level to use the weapon.
+            critical_rate (float): The critical rate of the weapon.
+            speed (float): The speed of the weapon.
+        &#34;&#34;&#34;
+        Weapon.__init__(self, name, damage_min, damage_max, required_level, WeaponType.BOW, critical_rate, speed);
+
+    def fire(self, projectile: Projectile):
+        &#34;&#34;&#34;Fire the given projectil.
+
+        Args:
+            projectile (Projectile): The projectile use to damage target.
+        &#34;&#34;&#34;
+        pass;</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="video-game.amunation.Weapon" href="#video-game.amunation.Weapon">Weapon</a></li>
+</ul>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="video-game.amunation.Crossbow" href="#video-game.amunation.Crossbow">Crossbow</a></li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="video-game.amunation.Bow.fire"><code class="name flex">
+<span>def <span class="ident">fire</span></span>(<span>self, projectile: video-game.amunation.Projectile)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Fire the given projectil.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>projectile</code></strong> :&ensp;<code><a title="video-game.amunation.Projectile" href="#video-game.amunation.Projectile">Projectile</a></code></dt>
+<dd>The projectile use to damage target.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def fire(self, projectile: Projectile):
+    &#34;&#34;&#34;Fire the given projectil.
+
+    Args:
+        projectile (Projectile): The projectile use to damage target.
+    &#34;&#34;&#34;
+    pass;</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="video-game.amunation.Weapon" href="#video-game.amunation.Weapon">Weapon</a></b></code>:
+<ul class="hlist">
+<li><code><a title="video-game.amunation.Weapon.get_damage_max" href="#video-game.amunation.Weapon.get_damage_max">get_damage_max</a></code></li>
+<li><code><a title="video-game.amunation.Weapon.get_damage_min" href="#video-game.amunation.Weapon.get_damage_min">get_damage_min</a></code></li>
+<li><code><a title="video-game.amunation.Weapon.inflict_damage" href="#video-game.amunation.Weapon.inflict_damage">inflict_damage</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="video-game.amunation.BowBuilder"><code class="flex name class">
+<span>class <span class="ident">BowBuilder</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class that represents a Bow Builder.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>WeaponBuilder</code></strong> :&ensp;<code><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></code></dt>
+<dd>BowBuilder is a WeaponBuilder type base.</dd>
+</dl>
+<p>BowBuilder Constructor.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class BowBuilder(WeaponBuilder):
+    &#34;&#34;&#34;Class that represents a Bow Builder.
+
+    Args:
+        WeaponBuilder (WeaponBuilder): BowBuilder is a WeaponBuilder type base.
+    &#34;&#34;&#34;
+    def __init__(self) -&gt; None:
+        &#34;&#34;&#34;BowBuilder Constructor.
+        &#34;&#34;&#34;
+        WeaponBuilder.__init__(self, WeaponType.BOW);
+    
+    def build(self) -&gt; Weapon:
+        return Bow(self._name, self._damage_min, self._damage_max, self._required_level, self._critical_rate, self._speed);</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></li>
+</ul>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></b></code>:
+<ul class="hlist">
+<li><code><a title="video-game.amunation.WeaponBuilder.build" href="#video-game.amunation.WeaponBuilder.build">build</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.create_builder" href="#video-game.amunation.WeaponBuilder.create_builder">create_builder</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_critical_rate" href="#video-game.amunation.WeaponBuilder.with_critical_rate">with_critical_rate</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_damage_max" href="#video-game.amunation.WeaponBuilder.with_damage_max">with_damage_max</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_damage_min" href="#video-game.amunation.WeaponBuilder.with_damage_min">with_damage_min</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_name" href="#video-game.amunation.WeaponBuilder.with_name">with_name</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_required_level" href="#video-game.amunation.WeaponBuilder.with_required_level">with_required_level</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_speed" href="#video-game.amunation.WeaponBuilder.with_speed">with_speed</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="video-game.amunation.Crossbow"><code class="flex name class">
+<span>class <span class="ident">Crossbow</span></span>
+<span>(</span><span>name: str, damage_min: int, damage_max: int, required_level: int, critical_rate: float, speed: float)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class that represents a Crossbow.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>Bow</code></strong> :&ensp;<code><a title="video-game.amunation.Bow" href="#video-game.amunation.Bow">Bow</a></code></dt>
+<dd>Crossbow is a Bow type base.</dd>
+</dl>
+<p>Bow Constructor.</p>
+<h2 id="args_1">Args</h2>
+<dl>
+<dt><strong><code>name</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the weapon.</dd>
+<dt><strong><code>damage_min</code></strong> :&ensp;<code>int</code></dt>
+<dd>The minimal damage inflicted by the weapon.</dd>
+<dt><strong><code>damage_max</code></strong> :&ensp;<code>int</code></dt>
+<dd>The maximal damage inflicted by the weapon.</dd>
+<dt><strong><code>required_level</code></strong> :&ensp;<code>int</code></dt>
+<dd>The minimal required player's level to use the weapon.</dd>
+<dt><strong><code>critical_rate</code></strong> :&ensp;<code>float</code></dt>
+<dd>The critical rate of the weapon.</dd>
+<dt><strong><code>speed</code></strong> :&ensp;<code>float</code></dt>
+<dd>The speed of the weapon.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Crossbow(Bow):
+    &#34;&#34;&#34;Class that represents a Crossbow.
+
+    Args:
+        Bow (Bow): Crossbow is a Bow type base.
+    &#34;&#34;&#34;
+    def __init__(self, name: str, damage_min: int, damage_max: int, required_level: int, critical_rate: float, speed: float):
+        &#34;&#34;&#34;Bow Constructor.
+
+        Args:
+            name (str): The name of the weapon.
+            damage_min (int): The minimal damage inflicted by the weapon.
+            damage_max (int): The maximal damage inflicted by the weapon.
+            required_level (int): The minimal required player&#39;s level to use the weapon.
+            critical_rate (float): The critical rate of the weapon.
+            speed (float): The speed of the weapon.
+        &#34;&#34;&#34;
+        Bow.__init__(self, name, damage_min, damage_max, required_level, WeaponType.CROSSBOW, critical_rate, speed);</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="video-game.amunation.Bow" href="#video-game.amunation.Bow">Bow</a></li>
+<li><a title="video-game.amunation.Weapon" href="#video-game.amunation.Weapon">Weapon</a></li>
+</ul>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="video-game.amunation.Bow" href="#video-game.amunation.Bow">Bow</a></b></code>:
+<ul class="hlist">
+<li><code><a title="video-game.amunation.Bow.fire" href="#video-game.amunation.Bow.fire">fire</a></code></li>
+<li><code><a title="video-game.amunation.Bow.get_damage_max" href="#video-game.amunation.Weapon.get_damage_max">get_damage_max</a></code></li>
+<li><code><a title="video-game.amunation.Bow.get_damage_min" href="#video-game.amunation.Weapon.get_damage_min">get_damage_min</a></code></li>
+<li><code><a title="video-game.amunation.Bow.inflict_damage" href="#video-game.amunation.Weapon.inflict_damage">inflict_damage</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="video-game.amunation.CrossbowBuilder"><code class="flex name class">
+<span>class <span class="ident">CrossbowBuilder</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class that represents a Bow Builder.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>WeaponBuilder</code></strong> :&ensp;<code><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></code></dt>
+<dd>CrossbowBuilder is a WeaponBuilder type base.</dd>
+</dl>
+<p>CrossbowBuilder Constructor.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class CrossbowBuilder(WeaponBuilder):
+    &#34;&#34;&#34;Class that represents a Bow Builder.
+
+    Args:
+        WeaponBuilder (WeaponBuilder): CrossbowBuilder is a WeaponBuilder type base.
+    &#34;&#34;&#34;
+    def __init__(self) -&gt; None:
+        &#34;&#34;&#34;CrossbowBuilder Constructor.
+        &#34;&#34;&#34;
+        WeaponBuilder.__init__(self, WeaponType.CROSSBOW);
+    
+    def build(self) -&gt; Weapon:
+        return Crossbow(self._name, self._damage_min, self._damage_max, self._required_level, self._critical_rate, self._speed);</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></li>
+</ul>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></b></code>:
+<ul class="hlist">
+<li><code><a title="video-game.amunation.WeaponBuilder.build" href="#video-game.amunation.WeaponBuilder.build">build</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.create_builder" href="#video-game.amunation.WeaponBuilder.create_builder">create_builder</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_critical_rate" href="#video-game.amunation.WeaponBuilder.with_critical_rate">with_critical_rate</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_damage_max" href="#video-game.amunation.WeaponBuilder.with_damage_max">with_damage_max</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_damage_min" href="#video-game.amunation.WeaponBuilder.with_damage_min">with_damage_min</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_name" href="#video-game.amunation.WeaponBuilder.with_name">with_name</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_required_level" href="#video-game.amunation.WeaponBuilder.with_required_level">with_required_level</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_speed" href="#video-game.amunation.WeaponBuilder.with_speed">with_speed</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="video-game.amunation.Mace"><code class="flex name class">
+<span>class <span class="ident">Mace</span></span>
+<span>(</span><span>name: str, damage_min: int, damage_max: int, required_level: int, type: video-game.amunation.WeaponType, critical_rate: float, speed: float)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class that represents a Mace.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>Weapon</code></strong> :&ensp;<code><a title="video-game.amunation.Weapon" href="#video-game.amunation.Weapon">Weapon</a></code></dt>
+<dd>Mace is a Weapon type base.</dd>
+</dl>
+<p>Mace Constructor.</p>
+<h2 id="args_1">Args</h2>
+<dl>
+<dt><strong><code>name</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the weapon.</dd>
+<dt><strong><code>damage_min</code></strong> :&ensp;<code>int</code></dt>
+<dd>The minimal damage inflicted by the weapon.</dd>
+<dt><strong><code>damage_max</code></strong> :&ensp;<code>int</code></dt>
+<dd>The maximal damage inflicted by the weapon.</dd>
+<dt><strong><code>required_level</code></strong> :&ensp;<code>int</code></dt>
+<dd>The minimal required player's level to use the weapon.</dd>
+<dt><strong><code>type</code></strong> :&ensp;<code><a title="video-game.amunation.WeaponType" href="#video-game.amunation.WeaponType">WeaponType</a></code></dt>
+<dd>The type of the weapon.</dd>
+<dt><strong><code>critical_rate</code></strong> :&ensp;<code>float</code></dt>
+<dd>The critical rate of the weapon.</dd>
+<dt><strong><code>speed</code></strong> :&ensp;<code>float</code></dt>
+<dd>The speed of the weapon.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Mace(Weapon):
+    &#34;&#34;&#34;Class that represents a Mace.
+
+    Args:
+        Weapon (Weapon): Mace is a Weapon type base.
+    &#34;&#34;&#34;
+    def __init__(self, name: str, damage_min: int, damage_max: int, required_level: int, type: WeaponType, critical_rate: float, speed: float):
+        &#34;&#34;&#34;Mace Constructor.
+
+        Args:
+            name (str): The name of the weapon.
+            damage_min (int): The minimal damage inflicted by the weapon.
+            damage_max (int): The maximal damage inflicted by the weapon.
+            required_level (int): The minimal required player&#39;s level to use the weapon.
+            type (WeaponType): The type of the weapon.
+            critical_rate (float): The critical rate of the weapon.
+            speed (float): The speed of the weapon.
+        &#34;&#34;&#34;
+        Weapon.__init__(self, name, damage_min, damage_max, required_level, type, critical_rate, speed);</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="video-game.amunation.Weapon" href="#video-game.amunation.Weapon">Weapon</a></li>
+</ul>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="video-game.amunation.OneHandMace" href="#video-game.amunation.OneHandMace">OneHandMace</a></li>
+<li><a title="video-game.amunation.TwoHandsMace" href="#video-game.amunation.TwoHandsMace">TwoHandsMace</a></li>
+</ul>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="video-game.amunation.Weapon" href="#video-game.amunation.Weapon">Weapon</a></b></code>:
+<ul class="hlist">
+<li><code><a title="video-game.amunation.Weapon.get_damage_max" href="#video-game.amunation.Weapon.get_damage_max">get_damage_max</a></code></li>
+<li><code><a title="video-game.amunation.Weapon.get_damage_min" href="#video-game.amunation.Weapon.get_damage_min">get_damage_min</a></code></li>
+<li><code><a title="video-game.amunation.Weapon.inflict_damage" href="#video-game.amunation.Weapon.inflict_damage">inflict_damage</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="video-game.amunation.OneHandAxe"><code class="flex name class">
+<span>class <span class="ident">OneHandAxe</span></span>
+<span>(</span><span>name: str, damage_min: int, damage_max: int, required_level: int, critical_rate: float, speed: float)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class that represents an One Hand Axe.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>Axe</code></strong> :&ensp;<code><a title="video-game.amunation.Axe" href="#video-game.amunation.Axe">Axe</a></code></dt>
+<dd>OneHandAxe is a Axe type base.</dd>
+</dl>
+<p>OneHandAxe Constructor.</p>
+<h2 id="args_1">Args</h2>
+<dl>
+<dt><strong><code>name</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the weapon.</dd>
+<dt><strong><code>damage_min</code></strong> :&ensp;<code>int</code></dt>
+<dd>The minimal damage inflicted by the weapon.</dd>
+<dt><strong><code>damage_max</code></strong> :&ensp;<code>int</code></dt>
+<dd>The maximal damage inflicted by the weapon.</dd>
+<dt><strong><code>required_level</code></strong> :&ensp;<code>int</code></dt>
+<dd>The minimal required player's level to use the weapon.</dd>
+<dt><strong><code>critical_rate</code></strong> :&ensp;<code>float</code></dt>
+<dd>The critical rate of the weapon.</dd>
+<dt><strong><code>speed</code></strong> :&ensp;<code>float</code></dt>
+<dd>The speed of the weapon.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class OneHandAxe(Axe):
+    &#34;&#34;&#34;Class that represents an One Hand Axe.
+
+    Args:
+        Axe (Axe): OneHandAxe is a Axe type base.
+    &#34;&#34;&#34;
+    def __init__(self, name: str, damage_min: int, damage_max: int, required_level: int, critical_rate: float, speed: float):
+        &#34;&#34;&#34;OneHandAxe Constructor.
+
+        Args:
+            name (str): The name of the weapon.
+            damage_min (int): The minimal damage inflicted by the weapon.
+            damage_max (int): The maximal damage inflicted by the weapon.
+            required_level (int): The minimal required player&#39;s level to use the weapon.
+            critical_rate (float): The critical rate of the weapon.
+            speed (float): The speed of the weapon.
+        &#34;&#34;&#34;
+        Axe.__init__(self, name, damage_min, damage_max, required_level, WeaponType.ONE_HAND_AXE, critical_rate, speed);
+
+    def inflict_damage(self) -&gt; int:
+        damage = super().inflict_damage();
+        return damage</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="video-game.amunation.Axe" href="#video-game.amunation.Axe">Axe</a></li>
+<li><a title="video-game.amunation.Weapon" href="#video-game.amunation.Weapon">Weapon</a></li>
+</ul>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="video-game.amunation.Axe" href="#video-game.amunation.Axe">Axe</a></b></code>:
+<ul class="hlist">
+<li><code><a title="video-game.amunation.Axe.get_damage_max" href="#video-game.amunation.Weapon.get_damage_max">get_damage_max</a></code></li>
+<li><code><a title="video-game.amunation.Axe.get_damage_min" href="#video-game.amunation.Weapon.get_damage_min">get_damage_min</a></code></li>
+<li><code><a title="video-game.amunation.Axe.inflict_damage" href="#video-game.amunation.Weapon.inflict_damage">inflict_damage</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="video-game.amunation.OneHandAxeBuilder"><code class="flex name class">
+<span>class <span class="ident">OneHandAxeBuilder</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class that represents a One Hand Axe Builder.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>WeaponBuilder</code></strong> :&ensp;<code><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></code></dt>
+<dd>OneHandAxeBuilder is a WeaponBuilder type base.</dd>
+</dl>
+<p>OneHandAxeBuilder Constructor.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class OneHandAxeBuilder(WeaponBuilder):
+    &#34;&#34;&#34;Class that represents a One Hand Axe Builder.
+
+    Args:
+        WeaponBuilder (WeaponBuilder): OneHandAxeBuilder is a WeaponBuilder type base.
+    &#34;&#34;&#34;
+    def __init__(self) -&gt; None:
+        &#34;&#34;&#34;OneHandAxeBuilder Constructor.
+        &#34;&#34;&#34;
+        WeaponBuilder.__init__(self, WeaponType.ONE_HAND_AXE);
+    
+    def build(self) -&gt; Weapon:
+        return OneHandAxe(self._name, self._damage_min, self._damage_max, self._required_level, self._critical_rate, self._speed);</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></li>
+</ul>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></b></code>:
+<ul class="hlist">
+<li><code><a title="video-game.amunation.WeaponBuilder.build" href="#video-game.amunation.WeaponBuilder.build">build</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.create_builder" href="#video-game.amunation.WeaponBuilder.create_builder">create_builder</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_critical_rate" href="#video-game.amunation.WeaponBuilder.with_critical_rate">with_critical_rate</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_damage_max" href="#video-game.amunation.WeaponBuilder.with_damage_max">with_damage_max</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_damage_min" href="#video-game.amunation.WeaponBuilder.with_damage_min">with_damage_min</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_name" href="#video-game.amunation.WeaponBuilder.with_name">with_name</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_required_level" href="#video-game.amunation.WeaponBuilder.with_required_level">with_required_level</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_speed" href="#video-game.amunation.WeaponBuilder.with_speed">with_speed</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="video-game.amunation.OneHandMace"><code class="flex name class">
+<span>class <span class="ident">OneHandMace</span></span>
+<span>(</span><span>name: str, damage_min: int, damage_max: int, required_level: int, critical_rate: float, speed: float)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class that represents an One Hand Mace.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>Mace</code></strong> :&ensp;<code><a title="video-game.amunation.Mace" href="#video-game.amunation.Mace">Mace</a></code></dt>
+<dd>OneHandMace is a Mace type base.</dd>
+</dl>
+<p>OneHandMace Constructor.</p>
+<h2 id="args_1">Args</h2>
+<dl>
+<dt><strong><code>name</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the weapon.</dd>
+<dt><strong><code>damage_min</code></strong> :&ensp;<code>int</code></dt>
+<dd>The minimal damage inflicted by the weapon.</dd>
+<dt><strong><code>damage_max</code></strong> :&ensp;<code>int</code></dt>
+<dd>The maximal damage inflicted by the weapon.</dd>
+<dt><strong><code>required_level</code></strong> :&ensp;<code>int</code></dt>
+<dd>The minimal required player's level to use the weapon.</dd>
+<dt><strong><code>critical_rate</code></strong> :&ensp;<code>float</code></dt>
+<dd>The critical rate of the weapon.</dd>
+<dt><strong><code>speed</code></strong> :&ensp;<code>float</code></dt>
+<dd>The speed of the weapon.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class OneHandMace(Mace):
+    &#34;&#34;&#34;Class that represents an One Hand Mace.
+
+    Args:
+        Mace (Mace): OneHandMace is a Mace type base.
+    &#34;&#34;&#34;
+    def __init__(self, name: str, damage_min: int, damage_max: int, required_level: int, critical_rate: float, speed: float):
+        &#34;&#34;&#34;OneHandMace Constructor.
+
+        Args:
+            name (str): The name of the weapon.
+            damage_min (int): The minimal damage inflicted by the weapon.
+            damage_max (int): The maximal damage inflicted by the weapon.
+            required_level (int): The minimal required player&#39;s level to use the weapon.
+            critical_rate (float): The critical rate of the weapon.
+            speed (float): The speed of the weapon.
+        &#34;&#34;&#34;
+        Mace.__init__(self, name, damage_min, damage_max, required_level, WeaponType.ONE_HAND_MACE, critical_rate, speed);
+
+    def inflict_damage(self) -&gt; int:
+        damage = super().inflict_damage();
+        return damage</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="video-game.amunation.Mace" href="#video-game.amunation.Mace">Mace</a></li>
+<li><a title="video-game.amunation.Weapon" href="#video-game.amunation.Weapon">Weapon</a></li>
+</ul>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="video-game.amunation.Mace" href="#video-game.amunation.Mace">Mace</a></b></code>:
+<ul class="hlist">
+<li><code><a title="video-game.amunation.Mace.get_damage_max" href="#video-game.amunation.Weapon.get_damage_max">get_damage_max</a></code></li>
+<li><code><a title="video-game.amunation.Mace.get_damage_min" href="#video-game.amunation.Weapon.get_damage_min">get_damage_min</a></code></li>
+<li><code><a title="video-game.amunation.Mace.inflict_damage" href="#video-game.amunation.Weapon.inflict_damage">inflict_damage</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="video-game.amunation.OneHandMaceBuilder"><code class="flex name class">
+<span>class <span class="ident">OneHandMaceBuilder</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class that represents a One Hand Mace Builder.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>WeaponBuilder</code></strong> :&ensp;<code><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></code></dt>
+<dd>OneHandMaceBuilder is a WeaponBuilder type base.</dd>
+</dl>
+<p>OneHandMaceBuilder Constructor.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class OneHandMaceBuilder(WeaponBuilder):
+    &#34;&#34;&#34;Class that represents a One Hand Mace Builder.
+
+    Args:
+        WeaponBuilder (WeaponBuilder): OneHandMaceBuilder is a WeaponBuilder type base.
+    &#34;&#34;&#34;
+    def __init__(self) -&gt; None:
+        &#34;&#34;&#34;OneHandMaceBuilder Constructor.
+        &#34;&#34;&#34;
+        WeaponBuilder.__init__(self, WeaponType.ONE_HAND_MACE);
+    
+    def build(self) -&gt; Weapon:
+        return OneHandMace(self._name, self._damage_min, self._damage_max, self._required_level, self._critical_rate, self._speed);</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></li>
+</ul>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></b></code>:
+<ul class="hlist">
+<li><code><a title="video-game.amunation.WeaponBuilder.build" href="#video-game.amunation.WeaponBuilder.build">build</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.create_builder" href="#video-game.amunation.WeaponBuilder.create_builder">create_builder</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_critical_rate" href="#video-game.amunation.WeaponBuilder.with_critical_rate">with_critical_rate</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_damage_max" href="#video-game.amunation.WeaponBuilder.with_damage_max">with_damage_max</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_damage_min" href="#video-game.amunation.WeaponBuilder.with_damage_min">with_damage_min</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_name" href="#video-game.amunation.WeaponBuilder.with_name">with_name</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_required_level" href="#video-game.amunation.WeaponBuilder.with_required_level">with_required_level</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_speed" href="#video-game.amunation.WeaponBuilder.with_speed">with_speed</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="video-game.amunation.OneHandSword"><code class="flex name class">
+<span>class <span class="ident">OneHandSword</span></span>
+<span>(</span><span>name: str, damage_min: int, damage_max: int, required_level: int, critical_rate: float, speed: float)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class that represents an One Hand Sword.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>Sword</code></strong> :&ensp;<code><a title="video-game.amunation.Sword" href="#video-game.amunation.Sword">Sword</a></code></dt>
+<dd>OneHandSword is a Sword type base.</dd>
+</dl>
+<p>OneHandSword Constructor.</p>
+<h2 id="args_1">Args</h2>
+<dl>
+<dt><strong><code>name</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the weapon.</dd>
+<dt><strong><code>damage_min</code></strong> :&ensp;<code>int</code></dt>
+<dd>The minimal damage inflicted by the weapon.</dd>
+<dt><strong><code>damage_max</code></strong> :&ensp;<code>int</code></dt>
+<dd>The maximal damage inflicted by the weapon.</dd>
+<dt><strong><code>required_level</code></strong> :&ensp;<code>int</code></dt>
+<dd>The minimal required player's level to use the weapon.</dd>
+<dt><strong><code>critical_rate</code></strong> :&ensp;<code>float</code></dt>
+<dd>The critical rate of the weapon.</dd>
+<dt><strong><code>speed</code></strong> :&ensp;<code>float</code></dt>
+<dd>The speed of the weapon.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class OneHandSword(Sword):
+    &#34;&#34;&#34;Class that represents an One Hand Sword.
+
+    Args:
+        Sword (Sword): OneHandSword is a Sword type base.
+    &#34;&#34;&#34;
+    def __init__(self, name: str, damage_min: int, damage_max: int, required_level: int, critical_rate: float, speed: float):
+        &#34;&#34;&#34;OneHandSword Constructor.
+
+        Args:
+            name (str): The name of the weapon.
+            damage_min (int): The minimal damage inflicted by the weapon.
+            damage_max (int): The maximal damage inflicted by the weapon.
+            required_level (int): The minimal required player&#39;s level to use the weapon.
+            critical_rate (float): The critical rate of the weapon.
+            speed (float): The speed of the weapon.
+        &#34;&#34;&#34;
+        Sword.__init__(self, name, damage_min, damage_max, required_level, WeaponType.ONE_HAND_SWORD, critical_rate, speed);
+
+    def inflict_damage(self) -&gt; int:
+        damage = super().inflict_damage();
+        return damage</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="video-game.amunation.Sword" href="#video-game.amunation.Sword">Sword</a></li>
+<li><a title="video-game.amunation.Weapon" href="#video-game.amunation.Weapon">Weapon</a></li>
+</ul>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="video-game.amunation.Sword" href="#video-game.amunation.Sword">Sword</a></b></code>:
+<ul class="hlist">
+<li><code><a title="video-game.amunation.Sword.get_damage_max" href="#video-game.amunation.Weapon.get_damage_max">get_damage_max</a></code></li>
+<li><code><a title="video-game.amunation.Sword.get_damage_min" href="#video-game.amunation.Weapon.get_damage_min">get_damage_min</a></code></li>
+<li><code><a title="video-game.amunation.Sword.inflict_damage" href="#video-game.amunation.Weapon.inflict_damage">inflict_damage</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="video-game.amunation.OneHandSwordBuilder"><code class="flex name class">
+<span>class <span class="ident">OneHandSwordBuilder</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class that represents a One Hand Sword Builder.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>WeaponBuilder</code></strong> :&ensp;<code><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></code></dt>
+<dd>OneHandSwordBuilder is a WeaponBuilder type base.</dd>
+</dl>
+<p>OneHandSwordBuilder Constructor.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class OneHandSwordBuilder(WeaponBuilder):
+    &#34;&#34;&#34;Class that represents a One Hand Sword Builder.
+
+    Args:
+        WeaponBuilder (WeaponBuilder): OneHandSwordBuilder is a WeaponBuilder type base.
+    &#34;&#34;&#34;
+    def __init__(self) -&gt; None:
+        &#34;&#34;&#34;OneHandSwordBuilder Constructor.
+        &#34;&#34;&#34;
+        WeaponBuilder.__init__(self, WeaponType.ONE_HAND_SWORD);
+    
+    def build(self) -&gt; Weapon:
+        return OneHandSword(self._name, self._damage_min, self._damage_max, self._required_level, self._critical_rate, self._speed);</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></li>
+</ul>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></b></code>:
+<ul class="hlist">
+<li><code><a title="video-game.amunation.WeaponBuilder.build" href="#video-game.amunation.WeaponBuilder.build">build</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.create_builder" href="#video-game.amunation.WeaponBuilder.create_builder">create_builder</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_critical_rate" href="#video-game.amunation.WeaponBuilder.with_critical_rate">with_critical_rate</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_damage_max" href="#video-game.amunation.WeaponBuilder.with_damage_max">with_damage_max</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_damage_min" href="#video-game.amunation.WeaponBuilder.with_damage_min">with_damage_min</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_name" href="#video-game.amunation.WeaponBuilder.with_name">with_name</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_required_level" href="#video-game.amunation.WeaponBuilder.with_required_level">with_required_level</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_speed" href="#video-game.amunation.WeaponBuilder.with_speed">with_speed</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="video-game.amunation.Projectile"><code class="flex name class">
+<span>class <span class="ident">Projectile</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class that represents a projectile tha must use remote weapons like bow and crossbow.</p>
+<p>Projectile Constructor.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Projectile:
+    &#34;&#34;&#34;Class that represents a projectile tha must use remote weapons like bow and crossbow.
+    &#34;&#34;&#34;
+    def __init__(self) -&gt; None:
+        &#34;&#34;&#34;Projectile Constructor.
+        &#34;&#34;&#34;
+        pass</code></pre>
+</details>
+</dd>
+<dt id="video-game.amunation.Staff"><code class="flex name class">
+<span>class <span class="ident">Staff</span></span>
+<span>(</span><span>name: str, damage_min: int, damage_max: int, required_level: int, critical_rate: float, speed: float)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class that represents a Staff.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>Weapon</code></strong> :&ensp;<code><a title="video-game.amunation.Weapon" href="#video-game.amunation.Weapon">Weapon</a></code></dt>
+<dd>Staff is a Weapon type base.</dd>
+</dl>
+<p>Staff Constructor.</p>
+<h2 id="args_1">Args</h2>
+<dl>
+<dt><strong><code>name</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the weapon.</dd>
+<dt><strong><code>damage_min</code></strong> :&ensp;<code>int</code></dt>
+<dd>The minimal damage inflicted by the weapon.</dd>
+<dt><strong><code>damage_max</code></strong> :&ensp;<code>int</code></dt>
+<dd>The maximal damage inflicted by the weapon.</dd>
+<dt><strong><code>required_level</code></strong> :&ensp;<code>int</code></dt>
+<dd>The minimal required player's level to use the weapon.</dd>
+<dt><strong><code>critical_rate</code></strong> :&ensp;<code>float</code></dt>
+<dd>The critical rate of the weapon.</dd>
+<dt><strong><code>speed</code></strong> :&ensp;<code>float</code></dt>
+<dd>The speed of the weapon.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Staff(Weapon):
+    &#34;&#34;&#34;Class that represents a Staff.
+
+    Args:
+        Weapon (Weapon): Staff is a Weapon type base.
+    &#34;&#34;&#34;
+    def __init__(self, name: str, damage_min: int, damage_max: int, required_level: int, critical_rate: float, speed: float):
+        &#34;&#34;&#34;Staff Constructor.
+
+        Args:
+            name (str): The name of the weapon.
+            damage_min (int): The minimal damage inflicted by the weapon.
+            damage_max (int): The maximal damage inflicted by the weapon.
+            required_level (int): The minimal required player&#39;s level to use the weapon.
+            critical_rate (float): The critical rate of the weapon.
+            speed (float): The speed of the weapon.
+        &#34;&#34;&#34;
+        Weapon.__init__(self, name, damage_min, damage_max, required_level, WeaponType.STAFF, critical_rate, speed);</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="video-game.amunation.Weapon" href="#video-game.amunation.Weapon">Weapon</a></li>
+</ul>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="video-game.amunation.Weapon" href="#video-game.amunation.Weapon">Weapon</a></b></code>:
+<ul class="hlist">
+<li><code><a title="video-game.amunation.Weapon.get_damage_max" href="#video-game.amunation.Weapon.get_damage_max">get_damage_max</a></code></li>
+<li><code><a title="video-game.amunation.Weapon.get_damage_min" href="#video-game.amunation.Weapon.get_damage_min">get_damage_min</a></code></li>
+<li><code><a title="video-game.amunation.Weapon.inflict_damage" href="#video-game.amunation.Weapon.inflict_damage">inflict_damage</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="video-game.amunation.StaffBuilder"><code class="flex name class">
+<span>class <span class="ident">StaffBuilder</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class that represents a Staff Builder.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>WeaponBuilder</code></strong> :&ensp;<code><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></code></dt>
+<dd>StaffBuilder is a WeaponBuilder type base.</dd>
+</dl>
+<p>StaffBuilder Constructor.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class StaffBuilder(WeaponBuilder):
+    &#34;&#34;&#34;Class that represents a Staff Builder.
+
+    Args:
+        WeaponBuilder (WeaponBuilder): StaffBuilder is a WeaponBuilder type base.
+    &#34;&#34;&#34;
+    def __init__(self) -&gt; None:
+        &#34;&#34;&#34;StaffBuilder Constructor.
+        &#34;&#34;&#34;
+        WeaponBuilder.__init__(self, WeaponType.STAFF);
+    
+    def build(self) -&gt; Weapon:
+        return Staff(self._name, self._damage_min, self._damage_max, self._required_level, self._critical_rate, self._speed);</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></li>
+</ul>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></b></code>:
+<ul class="hlist">
+<li><code><a title="video-game.amunation.WeaponBuilder.build" href="#video-game.amunation.WeaponBuilder.build">build</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.create_builder" href="#video-game.amunation.WeaponBuilder.create_builder">create_builder</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_critical_rate" href="#video-game.amunation.WeaponBuilder.with_critical_rate">with_critical_rate</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_damage_max" href="#video-game.amunation.WeaponBuilder.with_damage_max">with_damage_max</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_damage_min" href="#video-game.amunation.WeaponBuilder.with_damage_min">with_damage_min</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_name" href="#video-game.amunation.WeaponBuilder.with_name">with_name</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_required_level" href="#video-game.amunation.WeaponBuilder.with_required_level">with_required_level</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_speed" href="#video-game.amunation.WeaponBuilder.with_speed">with_speed</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="video-game.amunation.Sword"><code class="flex name class">
+<span>class <span class="ident">Sword</span></span>
+<span>(</span><span>name: str, damage_min: int, damage_max: int, required_level: int, type: video-game.amunation.WeaponType, critical_rate: float, speed: float)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class that represents a Sword.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>Weapon</code></strong> :&ensp;<code><a title="video-game.amunation.Weapon" href="#video-game.amunation.Weapon">Weapon</a></code></dt>
+<dd>Sword is a Weapon type base.</dd>
+</dl>
+<p>Sword Constructor.</p>
+<h2 id="args_1">Args</h2>
+<dl>
+<dt><strong><code>name</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the weapon.</dd>
+<dt><strong><code>damage_min</code></strong> :&ensp;<code>int</code></dt>
+<dd>The minimal damage inflicted by the weapon.</dd>
+<dt><strong><code>damage_max</code></strong> :&ensp;<code>int</code></dt>
+<dd>The maximal damage inflicted by the weapon.</dd>
+<dt><strong><code>required_level</code></strong> :&ensp;<code>int</code></dt>
+<dd>The minimal required player's level to use the weapon.</dd>
+<dt><strong><code>type</code></strong> :&ensp;<code><a title="video-game.amunation.WeaponType" href="#video-game.amunation.WeaponType">WeaponType</a></code></dt>
+<dd>The type of the weapon.</dd>
+<dt><strong><code>critical_rate</code></strong> :&ensp;<code>float</code></dt>
+<dd>The critical rate of the weapon.</dd>
+<dt><strong><code>speed</code></strong> :&ensp;<code>float</code></dt>
+<dd>The speed of the weapon.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Sword(Weapon):
+    &#34;&#34;&#34;Class that represents a Sword.
+
+    Args:
+        Weapon (Weapon): Sword is a Weapon type base.
+    &#34;&#34;&#34;
+    def __init__(self, name: str, damage_min: int, damage_max: int, required_level: int, type: WeaponType, critical_rate: float, speed: float):
+        &#34;&#34;&#34;Sword Constructor.
+
+        Args:
+            name (str): The name of the weapon.
+            damage_min (int): The minimal damage inflicted by the weapon.
+            damage_max (int): The maximal damage inflicted by the weapon.
+            required_level (int): The minimal required player&#39;s level to use the weapon.
+            type (WeaponType): The type of the weapon.
+            critical_rate (float): The critical rate of the weapon.
+            speed (float): The speed of the weapon.
+        &#34;&#34;&#34;
+        Weapon.__init__(self, name, damage_min, damage_max, required_level, type, critical_rate, speed);</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="video-game.amunation.Weapon" href="#video-game.amunation.Weapon">Weapon</a></li>
+</ul>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="video-game.amunation.OneHandSword" href="#video-game.amunation.OneHandSword">OneHandSword</a></li>
+<li><a title="video-game.amunation.TwoHandsSword" href="#video-game.amunation.TwoHandsSword">TwoHandsSword</a></li>
+</ul>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="video-game.amunation.Weapon" href="#video-game.amunation.Weapon">Weapon</a></b></code>:
+<ul class="hlist">
+<li><code><a title="video-game.amunation.Weapon.get_damage_max" href="#video-game.amunation.Weapon.get_damage_max">get_damage_max</a></code></li>
+<li><code><a title="video-game.amunation.Weapon.get_damage_min" href="#video-game.amunation.Weapon.get_damage_min">get_damage_min</a></code></li>
+<li><code><a title="video-game.amunation.Weapon.inflict_damage" href="#video-game.amunation.Weapon.inflict_damage">inflict_damage</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="video-game.amunation.TwoHandsAxe"><code class="flex name class">
+<span>class <span class="ident">TwoHandsAxe</span></span>
+<span>(</span><span>name: str, damage_min: int, damage_max: int, required_level: int, critical_rate: float, speed: float)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class that represents a Two Hands Axe.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>Axe</code></strong> :&ensp;<code><a title="video-game.amunation.Axe" href="#video-game.amunation.Axe">Axe</a></code></dt>
+<dd>TwoHandsAxe is a Axe type base.</dd>
+</dl>
+<p>TwoHandsAxe Constructor.</p>
+<h2 id="args_1">Args</h2>
+<dl>
+<dt><strong><code>name</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the weapon.</dd>
+<dt><strong><code>damage_min</code></strong> :&ensp;<code>int</code></dt>
+<dd>The minimal damage inflicted by the weapon.</dd>
+<dt><strong><code>damage_max</code></strong> :&ensp;<code>int</code></dt>
+<dd>The maximal damage inflicted by the weapon.</dd>
+<dt><strong><code>required_level</code></strong> :&ensp;<code>int</code></dt>
+<dd>The minimal required player's level to use the weapon.</dd>
+<dt><strong><code>critical_rate</code></strong> :&ensp;<code>float</code></dt>
+<dd>The critical rate of the weapon.</dd>
+<dt><strong><code>speed</code></strong> :&ensp;<code>float</code></dt>
+<dd>The speed of the weapon.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class TwoHandsAxe(Axe):
+    &#34;&#34;&#34;Class that represents a Two Hands Axe.
+
+    Args:
+        Axe (Axe): TwoHandsAxe is a Axe type base.
+    &#34;&#34;&#34;
+    def __init__(self, name: str, damage_min: int, damage_max: int, required_level: int, critical_rate: float, speed: float):
+        &#34;&#34;&#34;TwoHandsAxe Constructor.
+
+        Args:
+            name (str): The name of the weapon.
+            damage_min (int): The minimal damage inflicted by the weapon.
+            damage_max (int): The maximal damage inflicted by the weapon.
+            required_level (int): The minimal required player&#39;s level to use the weapon.
+            critical_rate (float): The critical rate of the weapon.
+            speed (float): The speed of the weapon.
+        &#34;&#34;&#34;
+        Axe.__init__(self, name, damage_min, damage_max, required_level, WeaponType.TWO_HANDS_AXE, critical_rate, speed);</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="video-game.amunation.Axe" href="#video-game.amunation.Axe">Axe</a></li>
+<li><a title="video-game.amunation.Weapon" href="#video-game.amunation.Weapon">Weapon</a></li>
+</ul>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="video-game.amunation.Axe" href="#video-game.amunation.Axe">Axe</a></b></code>:
+<ul class="hlist">
+<li><code><a title="video-game.amunation.Axe.get_damage_max" href="#video-game.amunation.Weapon.get_damage_max">get_damage_max</a></code></li>
+<li><code><a title="video-game.amunation.Axe.get_damage_min" href="#video-game.amunation.Weapon.get_damage_min">get_damage_min</a></code></li>
+<li><code><a title="video-game.amunation.Axe.inflict_damage" href="#video-game.amunation.Weapon.inflict_damage">inflict_damage</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="video-game.amunation.TwoHandsAxeBuilder"><code class="flex name class">
+<span>class <span class="ident">TwoHandsAxeBuilder</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class that represents a Two Hands Axe Builder.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>WeaponBuilder</code></strong> :&ensp;<code><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></code></dt>
+<dd>TwoHandsAxeBuilder is a WeaponBuilder type base.</dd>
+</dl>
+<p>TwoHandsAxeBuilder Constructor.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class TwoHandsAxeBuilder(WeaponBuilder):
+    &#34;&#34;&#34;Class that represents a Two Hands Axe Builder.
+
+    Args:
+        WeaponBuilder (WeaponBuilder): TwoHandsAxeBuilder is a WeaponBuilder type base.
+    &#34;&#34;&#34;
+    def __init__(self) -&gt; None:
+        &#34;&#34;&#34;TwoHandsAxeBuilder Constructor.
+        &#34;&#34;&#34;
+        WeaponBuilder.__init__(self, WeaponType.TWO_HANDS_AXE);
+    
+    def build(self) -&gt; Weapon:
+        return TwoHandsAxe(self._name, self._damage_min, self._damage_max, self._required_level, self._critical_rate, self._speed);</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></li>
+</ul>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></b></code>:
+<ul class="hlist">
+<li><code><a title="video-game.amunation.WeaponBuilder.build" href="#video-game.amunation.WeaponBuilder.build">build</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.create_builder" href="#video-game.amunation.WeaponBuilder.create_builder">create_builder</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_critical_rate" href="#video-game.amunation.WeaponBuilder.with_critical_rate">with_critical_rate</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_damage_max" href="#video-game.amunation.WeaponBuilder.with_damage_max">with_damage_max</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_damage_min" href="#video-game.amunation.WeaponBuilder.with_damage_min">with_damage_min</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_name" href="#video-game.amunation.WeaponBuilder.with_name">with_name</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_required_level" href="#video-game.amunation.WeaponBuilder.with_required_level">with_required_level</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_speed" href="#video-game.amunation.WeaponBuilder.with_speed">with_speed</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="video-game.amunation.TwoHandsMace"><code class="flex name class">
+<span>class <span class="ident">TwoHandsMace</span></span>
+<span>(</span><span>name: str, damage_min: int, damage_max: int, required_level: int, critical_rate: float, speed: float)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class that represents a Two Hands Mace.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>Mace</code></strong> :&ensp;<code><a title="video-game.amunation.Mace" href="#video-game.amunation.Mace">Mace</a></code></dt>
+<dd>TwoHandsMace is a Mace type base.</dd>
+</dl>
+<p>TwoHandsMace Constructor.</p>
+<h2 id="args_1">Args</h2>
+<dl>
+<dt><strong><code>name</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the weapon.</dd>
+<dt><strong><code>damage_min</code></strong> :&ensp;<code>int</code></dt>
+<dd>The minimal damage inflicted by the weapon.</dd>
+<dt><strong><code>damage_max</code></strong> :&ensp;<code>int</code></dt>
+<dd>The maximal damage inflicted by the weapon.</dd>
+<dt><strong><code>required_level</code></strong> :&ensp;<code>int</code></dt>
+<dd>The minimal required player's level to use the weapon.</dd>
+<dt><strong><code>critical_rate</code></strong> :&ensp;<code>float</code></dt>
+<dd>The critical rate of the weapon.</dd>
+<dt><strong><code>speed</code></strong> :&ensp;<code>float</code></dt>
+<dd>The speed of the weapon.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class TwoHandsMace(Mace):
+    &#34;&#34;&#34;Class that represents a Two Hands Mace.
+
+    Args:
+        Mace (Mace): TwoHandsMace is a Mace type base.
+    &#34;&#34;&#34;
+    def __init__(self, name: str, damage_min: int, damage_max: int, required_level: int, critical_rate: float, speed: float):
+        &#34;&#34;&#34;TwoHandsMace Constructor.
+
+        Args:
+            name (str): The name of the weapon.
+            damage_min (int): The minimal damage inflicted by the weapon.
+            damage_max (int): The maximal damage inflicted by the weapon.
+            required_level (int): The minimal required player&#39;s level to use the weapon.
+            critical_rate (float): The critical rate of the weapon.
+            speed (float): The speed of the weapon.
+        &#34;&#34;&#34;
+        Mace.__init__(self, name, damage_min, damage_max, required_level, WeaponType.TWO_HANDS_MACE, critical_rate, speed);</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="video-game.amunation.Mace" href="#video-game.amunation.Mace">Mace</a></li>
+<li><a title="video-game.amunation.Weapon" href="#video-game.amunation.Weapon">Weapon</a></li>
+</ul>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="video-game.amunation.Mace" href="#video-game.amunation.Mace">Mace</a></b></code>:
+<ul class="hlist">
+<li><code><a title="video-game.amunation.Mace.get_damage_max" href="#video-game.amunation.Weapon.get_damage_max">get_damage_max</a></code></li>
+<li><code><a title="video-game.amunation.Mace.get_damage_min" href="#video-game.amunation.Weapon.get_damage_min">get_damage_min</a></code></li>
+<li><code><a title="video-game.amunation.Mace.inflict_damage" href="#video-game.amunation.Weapon.inflict_damage">inflict_damage</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="video-game.amunation.TwoHandsMaceBuilder"><code class="flex name class">
+<span>class <span class="ident">TwoHandsMaceBuilder</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class that represents a Two Hands Mace Builder.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>WeaponBuilder</code></strong> :&ensp;<code><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></code></dt>
+<dd>TwoHandsMaceBuilder is a WeaponBuilder type base.</dd>
+</dl>
+<p>TwoHandsMaceBuilder Constructor.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class TwoHandsMaceBuilder(WeaponBuilder):
+    &#34;&#34;&#34;Class that represents a Two Hands Mace Builder.
+
+    Args:
+        WeaponBuilder (WeaponBuilder): TwoHandsMaceBuilder is a WeaponBuilder type base.
+    &#34;&#34;&#34;
+    def __init__(self) -&gt; None:
+        &#34;&#34;&#34;TwoHandsMaceBuilder Constructor.
+        &#34;&#34;&#34;
+        WeaponBuilder.__init__(self, WeaponType.TWO_HANDS_MACE);
+    
+    def build(self) -&gt; Weapon:
+        return TwoHandsMace(self._name, self._damage_min, self._damage_max, self._required_level, self._critical_rate, self._speed);</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></li>
+</ul>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></b></code>:
+<ul class="hlist">
+<li><code><a title="video-game.amunation.WeaponBuilder.build" href="#video-game.amunation.WeaponBuilder.build">build</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.create_builder" href="#video-game.amunation.WeaponBuilder.create_builder">create_builder</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_critical_rate" href="#video-game.amunation.WeaponBuilder.with_critical_rate">with_critical_rate</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_damage_max" href="#video-game.amunation.WeaponBuilder.with_damage_max">with_damage_max</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_damage_min" href="#video-game.amunation.WeaponBuilder.with_damage_min">with_damage_min</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_name" href="#video-game.amunation.WeaponBuilder.with_name">with_name</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_required_level" href="#video-game.amunation.WeaponBuilder.with_required_level">with_required_level</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_speed" href="#video-game.amunation.WeaponBuilder.with_speed">with_speed</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="video-game.amunation.TwoHandsSword"><code class="flex name class">
+<span>class <span class="ident">TwoHandsSword</span></span>
+<span>(</span><span>name: str, damage_min: int, damage_max: int, required_level: int, critical_rate: float, speed: float)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class that represents a Two Hands Sword.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>Sword</code></strong> :&ensp;<code><a title="video-game.amunation.Sword" href="#video-game.amunation.Sword">Sword</a></code></dt>
+<dd>TwoHandsSword is a Sword type base.</dd>
+</dl>
+<p>TwoHandsSword Constructor.</p>
+<h2 id="args_1">Args</h2>
+<dl>
+<dt><strong><code>name</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the weapon.</dd>
+<dt><strong><code>damage_min</code></strong> :&ensp;<code>int</code></dt>
+<dd>The minimal damage inflicted by the weapon.</dd>
+<dt><strong><code>damage_max</code></strong> :&ensp;<code>int</code></dt>
+<dd>The maximal damage inflicted by the weapon.</dd>
+<dt><strong><code>required_level</code></strong> :&ensp;<code>int</code></dt>
+<dd>The minimal required player's level to use the weapon.</dd>
+<dt><strong><code>critical_rate</code></strong> :&ensp;<code>float</code></dt>
+<dd>The critical rate of the weapon.</dd>
+<dt><strong><code>speed</code></strong> :&ensp;<code>float</code></dt>
+<dd>The speed of the weapon.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class TwoHandsSword(Sword):
+    &#34;&#34;&#34;Class that represents a Two Hands Sword.
+
+    Args:
+        Sword (Sword): TwoHandsSword is a Sword type base.
+    &#34;&#34;&#34;
+    def __init__(self, name: str, damage_min: int, damage_max: int, required_level: int, critical_rate: float, speed: float):
+        &#34;&#34;&#34;TwoHandsSword Constructor.
+
+        Args:
+            name (str): The name of the weapon.
+            damage_min (int): The minimal damage inflicted by the weapon.
+            damage_max (int): The maximal damage inflicted by the weapon.
+            required_level (int): The minimal required player&#39;s level to use the weapon.
+            critical_rate (float): The critical rate of the weapon.
+            speed (float): The speed of the weapon.
+        &#34;&#34;&#34;
+        Sword.__init__(self, name, damage_min, damage_max, required_level, WeaponType.TWO_HANDS_SWORD, critical_rate, speed);</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="video-game.amunation.Sword" href="#video-game.amunation.Sword">Sword</a></li>
+<li><a title="video-game.amunation.Weapon" href="#video-game.amunation.Weapon">Weapon</a></li>
+</ul>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="video-game.amunation.Sword" href="#video-game.amunation.Sword">Sword</a></b></code>:
+<ul class="hlist">
+<li><code><a title="video-game.amunation.Sword.get_damage_max" href="#video-game.amunation.Weapon.get_damage_max">get_damage_max</a></code></li>
+<li><code><a title="video-game.amunation.Sword.get_damage_min" href="#video-game.amunation.Weapon.get_damage_min">get_damage_min</a></code></li>
+<li><code><a title="video-game.amunation.Sword.inflict_damage" href="#video-game.amunation.Weapon.inflict_damage">inflict_damage</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="video-game.amunation.TwoHandsSwordBuilder"><code class="flex name class">
+<span>class <span class="ident">TwoHandsSwordBuilder</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class that represents a Two Hands Sword Builder.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>WeaponBuilder</code></strong> :&ensp;<code><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></code></dt>
+<dd>TwoHandsSwordBuilder is a WeaponBuilder type base.</dd>
+</dl>
+<p>TwoHandsSwordBuilder Constructor.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class TwoHandsSwordBuilder(WeaponBuilder):
+    &#34;&#34;&#34;Class that represents a Two Hands Sword Builder.
+
+    Args:
+        WeaponBuilder (WeaponBuilder): TwoHandsSwordBuilder is a WeaponBuilder type base.
+    &#34;&#34;&#34;
+    def __init__(self) -&gt; None:
+        &#34;&#34;&#34;TwoHandsSwordBuilder Constructor.
+        &#34;&#34;&#34;
+        WeaponBuilder.__init__(self, WeaponType.TWO_HANDS_SWORD);
+    
+    def build(self) -&gt; Weapon:
+        return TwoHandsSword(self._name, self._damage_min, self._damage_max, self._required_level, self._critical_rate, self._speed);</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></li>
+</ul>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></b></code>:
+<ul class="hlist">
+<li><code><a title="video-game.amunation.WeaponBuilder.build" href="#video-game.amunation.WeaponBuilder.build">build</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.create_builder" href="#video-game.amunation.WeaponBuilder.create_builder">create_builder</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_critical_rate" href="#video-game.amunation.WeaponBuilder.with_critical_rate">with_critical_rate</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_damage_max" href="#video-game.amunation.WeaponBuilder.with_damage_max">with_damage_max</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_damage_min" href="#video-game.amunation.WeaponBuilder.with_damage_min">with_damage_min</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_name" href="#video-game.amunation.WeaponBuilder.with_name">with_name</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_required_level" href="#video-game.amunation.WeaponBuilder.with_required_level">with_required_level</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_speed" href="#video-game.amunation.WeaponBuilder.with_speed">with_speed</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="video-game.amunation.Weapon"><code class="flex name class">
+<span>class <span class="ident">Weapon</span></span>
+<span>(</span><span>name: str, damage_min: int, damage_max: int, required_level: int, type: video-game.amunation.WeaponType, critical_rate: float, speed: float)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class that represents a weapon that can be used by players and can be dropped on killed trashs or in vault.</p>
+<p>Weapon Constructor.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>name</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the weapon.</dd>
+<dt><strong><code>damage_min</code></strong> :&ensp;<code>int</code></dt>
+<dd>The minimal damage inflicted by the weapon.</dd>
+<dt><strong><code>damage_max</code></strong> :&ensp;<code>int</code></dt>
+<dd>The maximal damage inflicted by the weapon.</dd>
+<dt><strong><code>required_level</code></strong> :&ensp;<code>int</code></dt>
+<dd>The minimal required player's level to use the weapon.</dd>
+<dt><strong><code>type</code></strong> :&ensp;<code><a title="video-game.amunation.WeaponType" href="#video-game.amunation.WeaponType">WeaponType</a></code></dt>
+<dd>The type of the weapon.</dd>
+<dt><strong><code>critical_rate</code></strong> :&ensp;<code>float</code></dt>
+<dd>The critical rate of the weapon.</dd>
+<dt><strong><code>speed</code></strong> :&ensp;<code>float</code></dt>
+<dd>The speed of the weapon.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Weapon:
+    &#34;&#34;&#34;
+    Class that represents a weapon that can be used by players and can be dropped on killed trashs or in vault.
+    &#34;&#34;&#34;
+    
+    def __init__(self, name: str, damage_min: int, damage_max: int, required_level: int, type: WeaponType, critical_rate: float, speed: float):
+        &#34;&#34;&#34;Weapon Constructor.
+
+        Args:
+            name (str): The name of the weapon.
+            damage_min (int): The minimal damage inflicted by the weapon.
+            damage_max (int): The maximal damage inflicted by the weapon.
+            required_level (int): The minimal required player&#39;s level to use the weapon.
+            type (WeaponType): The type of the weapon.
+            critical_rate (float): The critical rate of the weapon.
+            speed (float): The speed of the weapon.
+        &#34;&#34;&#34;
+        self._name: str = name;
+        self._damage_min: int = damage_min;
+        self._damage_max: int = damage_max;
+        self._required_level: int = required_level;
+        self._type: WeaponType = type;
+        self._critical_rate: float = critical_rate;
+        self._speed: float = speed;
+
+    def get_damage_min(self) -&gt; int:
+        &#34;&#34;&#34;Get damage min that can inflict the weapon.
+
+        Returns:
+            int: Minimal damage.
+        &#34;&#34;&#34;
+        return self._damage_min;
+
+    def get_damage_max(self) -&gt; int:
+        &#34;&#34;&#34;Get damage max that can inflict the weapon.
+
+        Returns:
+            int: Maximal damage.
+        &#34;&#34;&#34;
+        return self._damage_max;
+
+    def __can_generate_critical_damage(self) -&gt; bool:
+        &#34;&#34;&#34;Function that check if a critical damage can be used.
+
+        Returns:
+            bool: True if damage can be used, else False.
+        &#34;&#34;&#34;
+        chance: int = randint(0, 100);
+        return True if (chance &lt;= self._critical_rate) else False;
+
+    def inflict_damage(self) -&gt; int:
+        &#34;&#34;&#34;Function that generate damage to inflict a the target.
+        It&#39;s using __damage_min, __damage_max to generate damage.
+
+        Returns:
+            int: Damage generated by the weapon.
+        &#34;&#34;&#34;
+        damage: int = randint(self._damage_min, self._damage_max);
+        can_critical: bool = self.__can_generate_critical_damage();
+        return damage*3 if (can_critical) else damage;</code></pre>
+</details>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="video-game.amunation.Axe" href="#video-game.amunation.Axe">Axe</a></li>
+<li><a title="video-game.amunation.Bow" href="#video-game.amunation.Bow">Bow</a></li>
+<li><a title="video-game.amunation.Mace" href="#video-game.amunation.Mace">Mace</a></li>
+<li><a title="video-game.amunation.Staff" href="#video-game.amunation.Staff">Staff</a></li>
+<li><a title="video-game.amunation.Sword" href="#video-game.amunation.Sword">Sword</a></li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="video-game.amunation.Weapon.get_damage_max"><code class="name flex">
+<span>def <span class="ident">get_damage_max</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get damage max that can inflict the weapon.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>int</code></dt>
+<dd>Maximal damage.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_damage_max(self) -&gt; int:
+    &#34;&#34;&#34;Get damage max that can inflict the weapon.
+
+    Returns:
+        int: Maximal damage.
+    &#34;&#34;&#34;
+    return self._damage_max;</code></pre>
+</details>
+</dd>
+<dt id="video-game.amunation.Weapon.get_damage_min"><code class="name flex">
+<span>def <span class="ident">get_damage_min</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get damage min that can inflict the weapon.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>int</code></dt>
+<dd>Minimal damage.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_damage_min(self) -&gt; int:
+    &#34;&#34;&#34;Get damage min that can inflict the weapon.
+
+    Returns:
+        int: Minimal damage.
+    &#34;&#34;&#34;
+    return self._damage_min;</code></pre>
+</details>
+</dd>
+<dt id="video-game.amunation.Weapon.inflict_damage"><code class="name flex">
+<span>def <span class="ident">inflict_damage</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Function that generate damage to inflict a the target.
+It's using __damage_min, __damage_max to generate damage.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>int</code></dt>
+<dd>Damage generated by the weapon.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def inflict_damage(self) -&gt; int:
+    &#34;&#34;&#34;Function that generate damage to inflict a the target.
+    It&#39;s using __damage_min, __damage_max to generate damage.
+
+    Returns:
+        int: Damage generated by the weapon.
+    &#34;&#34;&#34;
+    damage: int = randint(self._damage_min, self._damage_max);
+    can_critical: bool = self.__can_generate_critical_damage();
+    return damage*3 if (can_critical) else damage;</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="video-game.amunation.WeaponBuilder"><code class="flex name class">
+<span>class <span class="ident">WeaponBuilder</span></span>
+<span>(</span><span>type: video-game.amunation.WeaponType)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class that represents a Generic Weapon Builder.</p>
+<p>WeaponBuilder Constructor.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>type</code></strong> :&ensp;<code><a title="video-game.amunation.WeaponType" href="#video-game.amunation.WeaponType">WeaponType</a></code></dt>
+<dd>The weapon's type.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class WeaponBuilder:
+    &#34;&#34;&#34;Class that represents a Generic Weapon Builder.
+    &#34;&#34;&#34;
+    def __init__(self, type: WeaponType) -&gt; None:
+        &#34;&#34;&#34;WeaponBuilder Constructor.
+
+        Args:
+            type (WeaponType): The weapon&#39;s type.
+        &#34;&#34;&#34;
+        self._name: str = None;
+        self._damage_min: int = 0;
+        self._damage_max: int = 0;
+        self._required_level: int = 0;
+        self._type: WeaponType = type;
+        self._critical_rate: float = 0.0;
+        self._speed: float = 0.0;
+    
+    @staticmethod
+    def create_builder(type: WeaponType):
+        &#34;&#34;&#34;Create a builder for the specicfic weapon type generation.
+
+        Args:
+            type (WeaponType): The type of the weapon to build.
+
+        Returns:
+            WeaponBuilder: The right implementation f the WeaponBuilder to use.
+        &#34;&#34;&#34;
+        builder = None;
+        match (type):
+            case WeaponType.ONE_HAND_SWORD:
+                builder = StaffBuilder();
+            case WeaponType.TWO_HANDS_SWORD:
+                builder = TwoHandsSwordBuilder();
+            case WeaponType.ONE_HAND_AXE:
+                builder = OneHandAxeBuilder();
+            case WeaponType.TWO_HANDS_AXE:
+                builder = TwoHandsAxeBuilder();
+            case WeaponType.ONE_HAND_MACE:
+                builder = OneHandMaceBuilder();
+            case WeaponType.TWO_HANDS_MACE:
+                builder = TwoHandsMaceBuilder();
+            case WeaponType.STAFF:
+                builder = StaffBuilder();
+            case WeaponType.BOW:
+                builder = BowBuilder();
+            case WeaponType.CROSSBOW:
+                builder = CrossbowBuilder();
+            case _:
+                builder = WeaponBuilder(type);
+
+        return builder;
+    
+    def with_name(self, name: str):
+        &#34;&#34;&#34;Define the name of the weapon.
+
+        Args:
+            name (str): Weapon&#39;s name.
+
+        Returns:
+            WeaponBuilder: Updated builder.
+        &#34;&#34;&#34;
+        self._name = name;
+        return self;
+    
+    def with_damage_min(self, damage_min: int):
+        &#34;&#34;&#34;Define the minimal damage of the weapon.
+
+        Args:
+            damage_min (int): Weapon&#39;s minimal damage.
+
+        Returns:
+            WeaponBuilder: Updated builder.
+        &#34;&#34;&#34;
+        self._damage_min = damage_min;
+        return self;
+    
+    def with_damage_max(self, damage_max: int):
+        &#34;&#34;&#34;Define the maximal damage of the weapon.
+
+        Args:
+            damage_max (int): Weapon&#39;s maximal damage.
+
+        Returns:
+            WeaponBuilder: Updated builder.
+        &#34;&#34;&#34;
+        self._damage_max = damage_max;
+        return self;
+    
+    def with_required_level(self, required_level: int):
+        &#34;&#34;&#34;Define the minimal required level to use the weapon.
+
+        Args:
+            required_level (int): Minimal required level to use the weapon.
+
+        Returns:
+            WeaponBuilder: Updated builder.
+        &#34;&#34;&#34;
+        self._required_level = required_level;
+        return self;
+    
+    def with_critical_rate(self, critical_rate: float):
+        &#34;&#34;&#34;Define the critical rate of the weapon.
+
+        Args:
+            critical_rate (float): Critical rate of the weapon.
+
+        Returns:
+            WeaponBuilder: Updated builder.
+        &#34;&#34;&#34;
+        self._critical_rate = critical_rate;
+        return self;
+    
+    def with_speed(self, speed: float):
+        &#34;&#34;&#34;Define the attack&#39;s speed of the weapon.
+
+        Args:
+            speed (float): Speed of the weapon.
+
+        Returns:
+            WeaponBuilder: Updated builder.
+        &#34;&#34;&#34;
+        self._speed = speed;
+        return self;
+
+    @abstractmethod
+    def build(self) -&gt; Weapon:
+        &#34;&#34;&#34;Build the weapon.
+
+        Returns:
+            Weapon: The builded weapon.
+        &#34;&#34;&#34;
+        raise Exception(&#34;Not yet implemented.&#34;);</code></pre>
+</details>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="video-game.amunation.BowBuilder" href="#video-game.amunation.BowBuilder">BowBuilder</a></li>
+<li><a title="video-game.amunation.CrossbowBuilder" href="#video-game.amunation.CrossbowBuilder">CrossbowBuilder</a></li>
+<li><a title="video-game.amunation.OneHandAxeBuilder" href="#video-game.amunation.OneHandAxeBuilder">OneHandAxeBuilder</a></li>
+<li><a title="video-game.amunation.OneHandMaceBuilder" href="#video-game.amunation.OneHandMaceBuilder">OneHandMaceBuilder</a></li>
+<li><a title="video-game.amunation.OneHandSwordBuilder" href="#video-game.amunation.OneHandSwordBuilder">OneHandSwordBuilder</a></li>
+<li><a title="video-game.amunation.StaffBuilder" href="#video-game.amunation.StaffBuilder">StaffBuilder</a></li>
+<li><a title="video-game.amunation.TwoHandsAxeBuilder" href="#video-game.amunation.TwoHandsAxeBuilder">TwoHandsAxeBuilder</a></li>
+<li><a title="video-game.amunation.TwoHandsMaceBuilder" href="#video-game.amunation.TwoHandsMaceBuilder">TwoHandsMaceBuilder</a></li>
+<li><a title="video-game.amunation.TwoHandsSwordBuilder" href="#video-game.amunation.TwoHandsSwordBuilder">TwoHandsSwordBuilder</a></li>
+</ul>
+<h3>Static methods</h3>
+<dl>
+<dt id="video-game.amunation.WeaponBuilder.create_builder"><code class="name flex">
+<span>def <span class="ident">create_builder</span></span>(<span>type: video-game.amunation.WeaponType)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Create a builder for the specicfic weapon type generation.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>type</code></strong> :&ensp;<code><a title="video-game.amunation.WeaponType" href="#video-game.amunation.WeaponType">WeaponType</a></code></dt>
+<dd>The type of the weapon to build.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></code></dt>
+<dd>The right implementation f the WeaponBuilder to use.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@staticmethod
+def create_builder(type: WeaponType):
+    &#34;&#34;&#34;Create a builder for the specicfic weapon type generation.
+
+    Args:
+        type (WeaponType): The type of the weapon to build.
+
+    Returns:
+        WeaponBuilder: The right implementation f the WeaponBuilder to use.
+    &#34;&#34;&#34;
+    builder = None;
+    match (type):
+        case WeaponType.ONE_HAND_SWORD:
+            builder = StaffBuilder();
+        case WeaponType.TWO_HANDS_SWORD:
+            builder = TwoHandsSwordBuilder();
+        case WeaponType.ONE_HAND_AXE:
+            builder = OneHandAxeBuilder();
+        case WeaponType.TWO_HANDS_AXE:
+            builder = TwoHandsAxeBuilder();
+        case WeaponType.ONE_HAND_MACE:
+            builder = OneHandMaceBuilder();
+        case WeaponType.TWO_HANDS_MACE:
+            builder = TwoHandsMaceBuilder();
+        case WeaponType.STAFF:
+            builder = StaffBuilder();
+        case WeaponType.BOW:
+            builder = BowBuilder();
+        case WeaponType.CROSSBOW:
+            builder = CrossbowBuilder();
+        case _:
+            builder = WeaponBuilder(type);
+
+    return builder;</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="video-game.amunation.WeaponBuilder.build"><code class="name flex">
+<span>def <span class="ident">build</span></span>(<span>self) ‑> video-game.amunation.Weapon</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Build the weapon.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code><a title="video-game.amunation.Weapon" href="#video-game.amunation.Weapon">Weapon</a></code></dt>
+<dd>The builded weapon.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@abstractmethod
+def build(self) -&gt; Weapon:
+    &#34;&#34;&#34;Build the weapon.
+
+    Returns:
+        Weapon: The builded weapon.
+    &#34;&#34;&#34;
+    raise Exception(&#34;Not yet implemented.&#34;);</code></pre>
+</details>
+</dd>
+<dt id="video-game.amunation.WeaponBuilder.with_critical_rate"><code class="name flex">
+<span>def <span class="ident">with_critical_rate</span></span>(<span>self, critical_rate: float)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Define the critical rate of the weapon.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>critical_rate</code></strong> :&ensp;<code>float</code></dt>
+<dd>Critical rate of the weapon.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></code></dt>
+<dd>Updated builder.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def with_critical_rate(self, critical_rate: float):
+    &#34;&#34;&#34;Define the critical rate of the weapon.
+
+    Args:
+        critical_rate (float): Critical rate of the weapon.
+
+    Returns:
+        WeaponBuilder: Updated builder.
+    &#34;&#34;&#34;
+    self._critical_rate = critical_rate;
+    return self;</code></pre>
+</details>
+</dd>
+<dt id="video-game.amunation.WeaponBuilder.with_damage_max"><code class="name flex">
+<span>def <span class="ident">with_damage_max</span></span>(<span>self, damage_max: int)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Define the maximal damage of the weapon.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>damage_max</code></strong> :&ensp;<code>int</code></dt>
+<dd>Weapon's maximal damage.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></code></dt>
+<dd>Updated builder.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def with_damage_max(self, damage_max: int):
+    &#34;&#34;&#34;Define the maximal damage of the weapon.
+
+    Args:
+        damage_max (int): Weapon&#39;s maximal damage.
+
+    Returns:
+        WeaponBuilder: Updated builder.
+    &#34;&#34;&#34;
+    self._damage_max = damage_max;
+    return self;</code></pre>
+</details>
+</dd>
+<dt id="video-game.amunation.WeaponBuilder.with_damage_min"><code class="name flex">
+<span>def <span class="ident">with_damage_min</span></span>(<span>self, damage_min: int)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Define the minimal damage of the weapon.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>damage_min</code></strong> :&ensp;<code>int</code></dt>
+<dd>Weapon's minimal damage.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></code></dt>
+<dd>Updated builder.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def with_damage_min(self, damage_min: int):
+    &#34;&#34;&#34;Define the minimal damage of the weapon.
+
+    Args:
+        damage_min (int): Weapon&#39;s minimal damage.
+
+    Returns:
+        WeaponBuilder: Updated builder.
+    &#34;&#34;&#34;
+    self._damage_min = damage_min;
+    return self;</code></pre>
+</details>
+</dd>
+<dt id="video-game.amunation.WeaponBuilder.with_name"><code class="name flex">
+<span>def <span class="ident">with_name</span></span>(<span>self, name: str)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Define the name of the weapon.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>name</code></strong> :&ensp;<code>str</code></dt>
+<dd>Weapon's name.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></code></dt>
+<dd>Updated builder.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def with_name(self, name: str):
+    &#34;&#34;&#34;Define the name of the weapon.
+
+    Args:
+        name (str): Weapon&#39;s name.
+
+    Returns:
+        WeaponBuilder: Updated builder.
+    &#34;&#34;&#34;
+    self._name = name;
+    return self;</code></pre>
+</details>
+</dd>
+<dt id="video-game.amunation.WeaponBuilder.with_required_level"><code class="name flex">
+<span>def <span class="ident">with_required_level</span></span>(<span>self, required_level: int)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Define the minimal required level to use the weapon.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>required_level</code></strong> :&ensp;<code>int</code></dt>
+<dd>Minimal required level to use the weapon.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></code></dt>
+<dd>Updated builder.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def with_required_level(self, required_level: int):
+    &#34;&#34;&#34;Define the minimal required level to use the weapon.
+
+    Args:
+        required_level (int): Minimal required level to use the weapon.
+
+    Returns:
+        WeaponBuilder: Updated builder.
+    &#34;&#34;&#34;
+    self._required_level = required_level;
+    return self;</code></pre>
+</details>
+</dd>
+<dt id="video-game.amunation.WeaponBuilder.with_speed"><code class="name flex">
+<span>def <span class="ident">with_speed</span></span>(<span>self, speed: float)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Define the attack's speed of the weapon.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>speed</code></strong> :&ensp;<code>float</code></dt>
+<dd>Speed of the weapon.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></code></dt>
+<dd>Updated builder.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def with_speed(self, speed: float):
+    &#34;&#34;&#34;Define the attack&#39;s speed of the weapon.
+
+    Args:
+        speed (float): Speed of the weapon.
+
+    Returns:
+        WeaponBuilder: Updated builder.
+    &#34;&#34;&#34;
+    self._speed = speed;
+    return self;</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="video-game.amunation.WeaponType"><code class="flex name class">
+<span>class <span class="ident">WeaponType</span></span>
+<span>(</span><span>value, names=None, *, module=None, qualname=None, type=None, start=1)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Enumeration that represents all available weapon types.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>Enum</code></strong></dt>
+<dd>Enumeration</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class WeaponType(Enum):
+    &#34;&#34;&#34;Enumeration that represents all available weapon types.
+
+    Args:
+        Enum: Enumeration
+    &#34;&#34;&#34;
+    ONE_HAND_SWORD=WeaponTypeValue(id=1, description_en=&#34;One Hand Sword&#34;, description_fr=&#34;Epée à une main&#34;);
+    TWO_HANDS_SWORD=WeaponTypeValue(id=2, description_fr=&#34;Epée à deux mains&#34;, description_en=&#34;Two Hands Sword&#34;);
+    ONE_HAND_AXE=WeaponTypeValue(3, description_fr=&#34;Hache à une main&#34;, description_en=&#34;One Hand Axe&#34;);
+    TWO_HANDS_AXE=WeaponTypeValue(4, &#34;Two hands axe&#34;, description_fr=&#34;Hace à deux mains&#34;);
+    ONE_HAND_MACE=WeaponTypeValue(5, &#34;Mace à une main&#34;, description_fr=&#34;One Hand Mace&#34;);
+    TWO_HANDS_MACE=WeaponTypeValue(6, &#34;Mace à deux mains&#34;, description_fr=&#34;Two Hands Mace&#34;);
+    STAFF=WeaponTypeValue(7, &#34;Staff&#34;, description_fr=&#34;Batton&#34;);
+    BOW=WeaponTypeValue(8, &#34;Bow&#34;, description_fr=&#34;Arc&#34;);
+    CROSSBOW=WeaponTypeValue(8, &#34;Crossbow&#34;, description_fr=&#34;Arbalète&#34;);</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>enum.Enum</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="video-game.amunation.WeaponType.BOW"><code class="name">var <span class="ident">BOW</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="video-game.amunation.WeaponType.CROSSBOW"><code class="name">var <span class="ident">CROSSBOW</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="video-game.amunation.WeaponType.ONE_HAND_AXE"><code class="name">var <span class="ident">ONE_HAND_AXE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="video-game.amunation.WeaponType.ONE_HAND_MACE"><code class="name">var <span class="ident">ONE_HAND_MACE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="video-game.amunation.WeaponType.ONE_HAND_SWORD"><code class="name">var <span class="ident">ONE_HAND_SWORD</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="video-game.amunation.WeaponType.STAFF"><code class="name">var <span class="ident">STAFF</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="video-game.amunation.WeaponType.TWO_HANDS_AXE"><code class="name">var <span class="ident">TWO_HANDS_AXE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="video-game.amunation.WeaponType.TWO_HANDS_MACE"><code class="name">var <span class="ident">TWO_HANDS_MACE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="video-game.amunation.WeaponType.TWO_HANDS_SWORD"><code class="name">var <span class="ident">TWO_HANDS_SWORD</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="video-game.amunation.WeaponTypeValue"><code class="flex name class">
+<span>class <span class="ident">WeaponTypeValue</span></span>
+<span>(</span><span>id: int, description_en: str, description_fr: str)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class that represents a detailed weapon type value.</p>
+<p>Weapon Type Value Construtor.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>id</code></strong> :&ensp;<code>int</code></dt>
+<dd>ID of the weapon type value.</dd>
+<dt><strong><code>description_en</code></strong> :&ensp;<code>str</code></dt>
+<dd>English description.</dd>
+<dt><strong><code>description_fr</code></strong> :&ensp;<code>str</code></dt>
+<dd>French description.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class WeaponTypeValue:
+    &#34;&#34;&#34;Class that represents a detailed weapon type value.
+    &#34;&#34;&#34;
+    def __init__(self, id: int, description_en: str, description_fr: str) -&gt; None:
+        &#34;&#34;&#34;Weapon Type Value Construtor.
+
+        Args:
+            id (int): ID of the weapon type value.
+            description_en (str): English description.
+            description_fr (str): French description.
+        &#34;&#34;&#34;
+        self.__id: int = id;
+        self.__description_en: str = description_en;
+        self.__description_fr: str = description_fr;
+        
+    def get_id(self) -&gt; int:
+        &#34;&#34;&#34;Get the weapon type value identifier.
+
+        Returns:
+            int: The identifier.
+        &#34;&#34;&#34;
+        return self.__id;
+    
+    def get_description_fr(self) -&gt; str:
+        &#34;&#34;&#34;Get the french description.
+
+        Returns:
+            str: The french description.
+        &#34;&#34;&#34;
+        return self.__description_fr;
+
+    def get_description_en(self) -&gt; str:
+        &#34;&#34;&#34;Get the english description.
+
+        Returns:
+            str: The english description.
+        &#34;&#34;&#34;
+        return self.__description_fr;</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="video-game.amunation.WeaponTypeValue.get_description_en"><code class="name flex">
+<span>def <span class="ident">get_description_en</span></span>(<span>self) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the english description.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>str</code></dt>
+<dd>The english description.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_description_en(self) -&gt; str:
+    &#34;&#34;&#34;Get the english description.
+
+    Returns:
+        str: The english description.
+    &#34;&#34;&#34;
+    return self.__description_fr;</code></pre>
+</details>
+</dd>
+<dt id="video-game.amunation.WeaponTypeValue.get_description_fr"><code class="name flex">
+<span>def <span class="ident">get_description_fr</span></span>(<span>self) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the french description.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>str</code></dt>
+<dd>The french description.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_description_fr(self) -&gt; str:
+    &#34;&#34;&#34;Get the french description.
+
+    Returns:
+        str: The french description.
+    &#34;&#34;&#34;
+    return self.__description_fr;</code></pre>
+</details>
+</dd>
+<dt id="video-game.amunation.WeaponTypeValue.get_id"><code class="name flex">
+<span>def <span class="ident">get_id</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the weapon type value identifier.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>int</code></dt>
+<dd>The identifier.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_id(self) -&gt; int:
+    &#34;&#34;&#34;Get the weapon type value identifier.
+
+    Returns:
+        int: The identifier.
+    &#34;&#34;&#34;
+    return self.__id;</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="video-game" href="index.html">video-game</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="video-game.amunation.Axe" href="#video-game.amunation.Axe">Axe</a></code></h4>
+</li>
+<li>
+<h4><code><a title="video-game.amunation.Bow" href="#video-game.amunation.Bow">Bow</a></code></h4>
+<ul class="">
+<li><code><a title="video-game.amunation.Bow.fire" href="#video-game.amunation.Bow.fire">fire</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="video-game.amunation.BowBuilder" href="#video-game.amunation.BowBuilder">BowBuilder</a></code></h4>
+</li>
+<li>
+<h4><code><a title="video-game.amunation.Crossbow" href="#video-game.amunation.Crossbow">Crossbow</a></code></h4>
+</li>
+<li>
+<h4><code><a title="video-game.amunation.CrossbowBuilder" href="#video-game.amunation.CrossbowBuilder">CrossbowBuilder</a></code></h4>
+</li>
+<li>
+<h4><code><a title="video-game.amunation.Mace" href="#video-game.amunation.Mace">Mace</a></code></h4>
+</li>
+<li>
+<h4><code><a title="video-game.amunation.OneHandAxe" href="#video-game.amunation.OneHandAxe">OneHandAxe</a></code></h4>
+</li>
+<li>
+<h4><code><a title="video-game.amunation.OneHandAxeBuilder" href="#video-game.amunation.OneHandAxeBuilder">OneHandAxeBuilder</a></code></h4>
+</li>
+<li>
+<h4><code><a title="video-game.amunation.OneHandMace" href="#video-game.amunation.OneHandMace">OneHandMace</a></code></h4>
+</li>
+<li>
+<h4><code><a title="video-game.amunation.OneHandMaceBuilder" href="#video-game.amunation.OneHandMaceBuilder">OneHandMaceBuilder</a></code></h4>
+</li>
+<li>
+<h4><code><a title="video-game.amunation.OneHandSword" href="#video-game.amunation.OneHandSword">OneHandSword</a></code></h4>
+</li>
+<li>
+<h4><code><a title="video-game.amunation.OneHandSwordBuilder" href="#video-game.amunation.OneHandSwordBuilder">OneHandSwordBuilder</a></code></h4>
+</li>
+<li>
+<h4><code><a title="video-game.amunation.Projectile" href="#video-game.amunation.Projectile">Projectile</a></code></h4>
+</li>
+<li>
+<h4><code><a title="video-game.amunation.Staff" href="#video-game.amunation.Staff">Staff</a></code></h4>
+</li>
+<li>
+<h4><code><a title="video-game.amunation.StaffBuilder" href="#video-game.amunation.StaffBuilder">StaffBuilder</a></code></h4>
+</li>
+<li>
+<h4><code><a title="video-game.amunation.Sword" href="#video-game.amunation.Sword">Sword</a></code></h4>
+</li>
+<li>
+<h4><code><a title="video-game.amunation.TwoHandsAxe" href="#video-game.amunation.TwoHandsAxe">TwoHandsAxe</a></code></h4>
+</li>
+<li>
+<h4><code><a title="video-game.amunation.TwoHandsAxeBuilder" href="#video-game.amunation.TwoHandsAxeBuilder">TwoHandsAxeBuilder</a></code></h4>
+</li>
+<li>
+<h4><code><a title="video-game.amunation.TwoHandsMace" href="#video-game.amunation.TwoHandsMace">TwoHandsMace</a></code></h4>
+</li>
+<li>
+<h4><code><a title="video-game.amunation.TwoHandsMaceBuilder" href="#video-game.amunation.TwoHandsMaceBuilder">TwoHandsMaceBuilder</a></code></h4>
+</li>
+<li>
+<h4><code><a title="video-game.amunation.TwoHandsSword" href="#video-game.amunation.TwoHandsSword">TwoHandsSword</a></code></h4>
+</li>
+<li>
+<h4><code><a title="video-game.amunation.TwoHandsSwordBuilder" href="#video-game.amunation.TwoHandsSwordBuilder">TwoHandsSwordBuilder</a></code></h4>
+</li>
+<li>
+<h4><code><a title="video-game.amunation.Weapon" href="#video-game.amunation.Weapon">Weapon</a></code></h4>
+<ul class="">
+<li><code><a title="video-game.amunation.Weapon.get_damage_max" href="#video-game.amunation.Weapon.get_damage_max">get_damage_max</a></code></li>
+<li><code><a title="video-game.amunation.Weapon.get_damage_min" href="#video-game.amunation.Weapon.get_damage_min">get_damage_min</a></code></li>
+<li><code><a title="video-game.amunation.Weapon.inflict_damage" href="#video-game.amunation.Weapon.inflict_damage">inflict_damage</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="video-game.amunation.WeaponBuilder" href="#video-game.amunation.WeaponBuilder">WeaponBuilder</a></code></h4>
+<ul class="two-column">
+<li><code><a title="video-game.amunation.WeaponBuilder.build" href="#video-game.amunation.WeaponBuilder.build">build</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.create_builder" href="#video-game.amunation.WeaponBuilder.create_builder">create_builder</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_critical_rate" href="#video-game.amunation.WeaponBuilder.with_critical_rate">with_critical_rate</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_damage_max" href="#video-game.amunation.WeaponBuilder.with_damage_max">with_damage_max</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_damage_min" href="#video-game.amunation.WeaponBuilder.with_damage_min">with_damage_min</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_name" href="#video-game.amunation.WeaponBuilder.with_name">with_name</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_required_level" href="#video-game.amunation.WeaponBuilder.with_required_level">with_required_level</a></code></li>
+<li><code><a title="video-game.amunation.WeaponBuilder.with_speed" href="#video-game.amunation.WeaponBuilder.with_speed">with_speed</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="video-game.amunation.WeaponType" href="#video-game.amunation.WeaponType">WeaponType</a></code></h4>
+<ul class="two-column">
+<li><code><a title="video-game.amunation.WeaponType.BOW" href="#video-game.amunation.WeaponType.BOW">BOW</a></code></li>
+<li><code><a title="video-game.amunation.WeaponType.CROSSBOW" href="#video-game.amunation.WeaponType.CROSSBOW">CROSSBOW</a></code></li>
+<li><code><a title="video-game.amunation.WeaponType.ONE_HAND_AXE" href="#video-game.amunation.WeaponType.ONE_HAND_AXE">ONE_HAND_AXE</a></code></li>
+<li><code><a title="video-game.amunation.WeaponType.ONE_HAND_MACE" href="#video-game.amunation.WeaponType.ONE_HAND_MACE">ONE_HAND_MACE</a></code></li>
+<li><code><a title="video-game.amunation.WeaponType.ONE_HAND_SWORD" href="#video-game.amunation.WeaponType.ONE_HAND_SWORD">ONE_HAND_SWORD</a></code></li>
+<li><code><a title="video-game.amunation.WeaponType.STAFF" href="#video-game.amunation.WeaponType.STAFF">STAFF</a></code></li>
+<li><code><a title="video-game.amunation.WeaponType.TWO_HANDS_AXE" href="#video-game.amunation.WeaponType.TWO_HANDS_AXE">TWO_HANDS_AXE</a></code></li>
+<li><code><a title="video-game.amunation.WeaponType.TWO_HANDS_MACE" href="#video-game.amunation.WeaponType.TWO_HANDS_MACE">TWO_HANDS_MACE</a></code></li>
+<li><code><a title="video-game.amunation.WeaponType.TWO_HANDS_SWORD" href="#video-game.amunation.WeaponType.TWO_HANDS_SWORD">TWO_HANDS_SWORD</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="video-game.amunation.WeaponTypeValue" href="#video-game.amunation.WeaponTypeValue">WeaponTypeValue</a></code></h4>
+<ul class="">
+<li><code><a title="video-game.amunation.WeaponTypeValue.get_description_en" href="#video-game.amunation.WeaponTypeValue.get_description_en">get_description_en</a></code></li>
+<li><code><a title="video-game.amunation.WeaponTypeValue.get_description_fr" href="#video-game.amunation.WeaponTypeValue.get_description_fr">get_description_fr</a></code></li>
+<li><code><a title="video-game.amunation.WeaponTypeValue.get_id" href="#video-game.amunation.WeaponTypeValue.get_id">get_id</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
