@@ -1,0 +1,64 @@
+DEBUG:MARKDOWN:Successfully imported extension module "markdown.extensions.abbr".
+DEBUG:MARKDOWN:Successfully loaded extension "markdown.extensions.abbr.AbbrExtension".
+DEBUG:MARKDOWN:Successfully imported extension module "markdown.extensions.attr_list".
+DEBUG:MARKDOWN:Successfully loaded extension "markdown.extensions.attr_list.AttrListExtension".
+DEBUG:MARKDOWN:Successfully imported extension module "markdown.extensions.def_list".
+DEBUG:MARKDOWN:Successfully loaded extension "markdown.extensions.def_list.DefListExtension".
+DEBUG:MARKDOWN:Successfully imported extension module "markdown.extensions.fenced_code".
+DEBUG:MARKDOWN:Successfully loaded extension "markdown.extensions.fenced_code.FencedCodeExtension".
+DEBUG:MARKDOWN:Successfully imported extension module "markdown.extensions.footnotes".
+DEBUG:MARKDOWN:Successfully loaded extension "markdown.extensions.footnotes.FootnoteExtension".
+DEBUG:MARKDOWN:Successfully imported extension module "markdown.extensions.tables".
+DEBUG:MARKDOWN:Successfully loaded extension "markdown.extensions.tables.TableExtension".
+DEBUG:MARKDOWN:Successfully imported extension module "markdown.extensions.admonition".
+DEBUG:MARKDOWN:Successfully loaded extension "markdown.extensions.admonition.AdmonitionExtension".
+DEBUG:MARKDOWN:Successfully imported extension module "markdown.extensions.smarty".
+DEBUG:MARKDOWN:Successfully loaded extension "markdown.extensions.smarty.SmartyExtension".
+DEBUG:MARKDOWN:Successfully imported extension module "markdown.extensions.toc".
+DEBUG:MARKDOWN:Successfully loaded extension "markdown.extensions.toc.TocExtension".
+DEBUG:MARKDOWN:Successfully imported extension module "markdown.extensions.abbr".
+DEBUG:MARKDOWN:Successfully loaded extension "markdown.extensions.abbr.AbbrExtension".
+DEBUG:MARKDOWN:Successfully imported extension module "markdown.extensions.attr_list".
+DEBUG:MARKDOWN:Successfully loaded extension "markdown.extensions.attr_list.AttrListExtension".
+DEBUG:MARKDOWN:Successfully imported extension module "markdown.extensions.def_list".
+DEBUG:MARKDOWN:Successfully loaded extension "markdown.extensions.def_list.DefListExtension".
+DEBUG:MARKDOWN:Successfully imported extension module "markdown.extensions.fenced_code".
+DEBUG:MARKDOWN:Successfully loaded extension "markdown.extensions.fenced_code.FencedCodeExtension".
+DEBUG:MARKDOWN:Successfully imported extension module "markdown.extensions.footnotes".
+DEBUG:MARKDOWN:Successfully loaded extension "markdown.extensions.footnotes.FootnoteExtension".
+DEBUG:MARKDOWN:Successfully imported extension module "markdown.extensions.tables".
+DEBUG:MARKDOWN:Successfully loaded extension "markdown.extensions.tables.TableExtension".
+DEBUG:MARKDOWN:Successfully imported extension module "markdown.extensions.admonition".
+DEBUG:MARKDOWN:Successfully loaded extension "markdown.extensions.admonition.AdmonitionExtension".
+DEBUG:MARKDOWN:Successfully imported extension module "markdown.extensions.smarty".
+DEBUG:MARKDOWN:Successfully loaded extension "markdown.extensions.smarty.SmartyExtension".
+DEBUG:MARKDOWN:Successfully imported extension module "markdown.extensions.toc".
+DEBUG:MARKDOWN:Successfully loaded extension "markdown.extensions.toc.TocExtension".
+WARNING:root:Application is starting...
+ERROR:root:[Errno 13] Permission denied: 'C:/Users/nicolas.metivier/Documents/test-logging.txt'
+Traceback (most recent call last):
+  File "C:\Users\nicolas.metivier\Documents\training\python\video-game\program.py", line 11, in main
+    with open("C:/Users/nicolas.metivier/Documents/test-logging.txt", "w") as file:
+PermissionError: [Errno 13] Permission denied: 'C:/Users/nicolas.metivier/Documents/test-logging.txt'
+INFO:root:Applciation is stopping...
+WARNING:root:Application is starting...
+ERROR:root:[Errno 13] Permission denied: 'C:/Users/nicolas.metivier/Documents/test-logging.txt'
+Traceback (most recent call last):
+  File "C:\Users\nicolas.metivier\Documents\training\python\video-game\program.py", line 17, in main
+    with open("C:/Users/nicolas.metivier/Documents/test-logging.txt", "w") as file:
+PermissionError: [Errno 13] Permission denied: 'C:/Users/nicolas.metivier/Documents/test-logging.txt'
+INFO:root:Applciation is stopping...
+WARNING:root:Application is starting...
+ERROR:root:[Errno 13] Permission denied: 'C:/Users/nicolas.metivier/Documents/test-logging.txt'
+Traceback (most recent call last):
+  File "C:\Users\nicolas.metivier\Documents\training\python\video-game\program.py", line 23, in main
+    with open("C:/Users/nicolas.metivier/Documents/test-logging.txt", "w") as file:
+PermissionError: [Errno 13] Permission denied: 'C:/Users/nicolas.metivier/Documents/test-logging.txt'
+INFO:root:Applciation is stopping...
+WARNING:root:Application is starting...
+ERROR:root:[Errno 13] Permission denied: 'C:/Users/nicolas.metivier/Documents/test-logging.txt'
+Traceback (most recent call last):
+  File "C:\Users\nicolas.metivier\Documents\training\python\video-game\program.py", line 24, in main
+    with open("C:/Users/nicolas.metivier/Documents/test-logging.txt", "w") as file:
+PermissionError: [Errno 13] Permission denied: 'C:/Users/nicolas.metivier/Documents/test-logging.txt'
+INFO:root:Applciation is stopping...
