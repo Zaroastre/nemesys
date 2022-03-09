@@ -254,7 +254,7 @@ class Player(Attackable, Liveable, Evolveable):
                 self.increase_experience(target.get_experience());
                 self.__get_loot(target.get_inventory());
 
-class Trash(Thread, Attackable, Liveable):
+class Trash(Attackable, Liveable):
     """Class that represents a Trash.
 
     Args:
@@ -264,7 +264,6 @@ class Trash(Thread, Attackable, Liveable):
     def __init__(self) -> None:
         """Trash Constrcutor.
         """
-        Thread.__init__(self);
         self.__name: str = "Arthas";
         self.__level: int = 1;
         self.__experience: int = 5;
@@ -273,6 +272,7 @@ class Trash(Thread, Attackable, Liveable):
         self.__weapon: Weapon = TwoHandsAxeBuilder().with_damage_min(10).with_damage_max(30).with_speed(0.1).build();
         self.__inventory: dict = self.__generate_inventory();
         self.__target: Liveable = None;
+        self.__attack_engine: Thread = AttackEngine(trash=self);
     
     def __generate_inventory(self) -> dict:
         """Generate randomly an inventory.
@@ -328,11 +328,31 @@ class Trash(Thread, Attackable, Liveable):
     def born(self):
         self.__current_life_points = self.__maximal_life_points;
 
+    def get_weapon(self) -> Weapon:
+        """Get the weapon of the trash.
+
+        Returns:
+            Weapon: Weapon of the trash.
+        """
+        return self.__weapon;
+
+    def get_target(self) -> Liveable:
+        """_summary_
+
+        Returns:
+            Liveable: _description_
+        """
+        return self.__target;
+
     def __attack(self):
         damage:int = self.__weapon.inflict_damage();
         print("{} The weapon inflict: {} damage.".format(self.__name, damage));
         return damage;
     
+    def execute_attack_process(self, target: Liveable):
+        self.__target = target;
+        self.__attack_engine.start();
+
     def attack(self, target: Liveable):
         """Hit/Attack the target.
 
@@ -345,10 +365,21 @@ class Trash(Thread, Attackable, Liveable):
         self.__target.decrease_life_points(damage);
         print("{} left {} PV.".format(target.get_name(), target.get_current_life_points()));
 
-    
+class AttackEngine(Thread):
+    def __init__(self, trash: Trash) -> None:
+        """Default Attack Engine Thread Constrcutor.
+
+        Args:
+            trash (Trash): Trash that use this thread to process attack.
+        """
+        Thread.__init__(self);
+        self.__trash: Trash = trash;
+
+
     def run(self) -> None:
-        while (self.is_alive() and self.__target.is_alive()):
-            self.attack(self.__target);
-            sleep(1-self.__weapon.get_speed());
-        if (not self.is_alive()):
-            self.die();
+        while (self.__trash.is_alive() and self.__trash.get_target().is_alive()):
+            self.__trash.attack(self.__trash.get_target());
+            sleep(1-self.__trash.get_weapon().get_speed());
+        if (not self.__trash.is_alive()):
+            self.__trash.die();
+

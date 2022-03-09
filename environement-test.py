@@ -34,7 +34,8 @@ def test_player_and_trash_fight():
     player: Player = Player();
     mob: Trash = Trash();
     mob.attack(player);
-    mob.start();
+    # mob.start();
+    mob.execute_attack_process(target=player);
     player.attack(mob, True);
     print("{} is {} with {} points of life.".format(player.get_name(), "alive" if player.is_alive() else "dead", player.get_current_life_points()));
     print("{} is {} with {} points of life.".format(mob.get_name(), "alive" if mob.is_alive() else "dead", mob.get_current_life_points()));
