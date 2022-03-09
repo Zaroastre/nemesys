@@ -1,0 +1,15 @@
+CREATE TABLE IF NOT EXISTS UserRole (
+    name VARCHAR(32) PRIMARY KEY
+);
+
+CREATE TABLE IF NOT EXISTS User (
+    username VARCHAR(64) PRIMARY KEY,
+    password VARCHAR(250) NOT NULL,
+    role VARCHAR(32) NOT NULL,
+    FOREIGN KEY(role) REFERENCES Role(name)
+);
+
+INSERT INTO UserRole VALUES ("PLAYER");
+INSERT INTO UserRole VALUES ("GAME_MASTER");
+
+INSERT INTO User VALUES ("admin.trator", "AdminIsTrator", "GAME_MASTER");

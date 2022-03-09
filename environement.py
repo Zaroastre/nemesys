@@ -125,7 +125,7 @@ class Evolveable:
         raise Exception("Not implemented.");
 
 class Player(Attackable, Liveable, Evolveable):
-    """CLass that represents a Player.
+    """Class that represents a Player.
 
     Args:
         Attackable (Attackable): Interface to implement to repesct the Attackable API.

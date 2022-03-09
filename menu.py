@@ -1,29 +1,58 @@
+import logging
+from engine import ServerGame
+
+from game_loader import load_game
+
 class MenuItem:
+    """Class that represents an item of the game's menu.
+    """
     def __init__(self, id: int, text: str) -> None:
+        """Default Menu Item Constructor.
+
+        Args:
+            id (int): Item identifier.
+            text (str): Item text.
+        """
         self.__id: int = id;
         self.__text: str = text;
     
     def get_id(self) -> int:
+        """Get the item identifier.
+
+        Returns:
+            int: The item identifier.
+        """
         return self.__id;
 
     def get_text(self) -> str:
+        """Get the item text.
+
+        Returns:
+            str: The item text.
+        """
         return self.__text;
 
 class Menu:
+    """Class that represents the game's menu.
+    """
     def __start_new_game(self):
         """Start a new game.
         """
-        print("New game will start.");
+        logging.debug("New game will start.");
+        game_server: ServerGame = ServerGame.get_instance(port=9600);
 
     def __continue_game(self):
         """Continue game loading an existing backup.
         """
-        print("Loading...");
+        logging.debug("Loading the game's backup...");
+        game_data: dict = load_game("./backup.json");
+        logging.debug("Game Data loaded: {}".format(game_data));
 
     def __quit(self):
         """Exit the game.
         """
-        print("Bye bye");
+        logging.info("Exiting game.")
+        exit(0);
     
     def display_menu(self):
         """Display menu's items and allow user to select action to process.
